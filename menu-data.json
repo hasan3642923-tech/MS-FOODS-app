@@ -1,0 +1,167 @@
+{
+  "menu": [
+    {
+      "id": "zinger-burger",
+      "category": "Burgers",
+      "name": "Zinger Burger",
+      "price": 350,
+      "emoji": "🍔",
+      "photo": "",
+      "description": "Crispy fried chicken fillet with fresh lettuce and signature sauce.",
+      "hot": true,
+      "soldOut": false
+    },
+    {
+      "id": "chicken-burger",
+      "category": "Burgers",
+      "name": "Chicken Burger",
+      "price": 280,
+      "emoji": "🍔",
+      "photo": "",
+      "description": "Tender grilled chicken patty served in a toasted bun.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "beef-burger",
+      "category": "Burgers",
+      "name": "Beef Burger",
+      "price": 380,
+      "emoji": "🍔",
+      "photo": "",
+      "description": "Juicy seasoned beef patty with cheese and house dressing.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "chicken-paratha-roll",
+      "category": "Rolls",
+      "name": "Chicken Paratha Roll",
+      "price": 250,
+      "emoji": "🌯",
+      "photo": "",
+      "description": "Flaky golden paratha wrapped around spiced chicken boti and chutney.",
+      "hot": true,
+      "soldOut": false
+    },
+    {
+      "id": "zinger-paratha-roll",
+      "category": "Rolls",
+      "name": "Zinger Paratha Roll",
+      "price": 300,
+      "emoji": "🌯",
+      "photo": "",
+      "description": "Crunchy zinger strips rolled in warm paratha with garlic mayo.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "seekh-kabab-roll",
+      "category": "Rolls",
+      "name": "Seekh Kabab Roll",
+      "price": 280,
+      "emoji": "🌯",
+      "photo": "",
+      "description": "Charcoal-grilled seekh kabab wrapped with onions and mint raita.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "plain-fries",
+      "category": "Fries",
+      "name": "Plain Fries",
+      "price": 150,
+      "emoji": "🍟",
+      "photo": "",
+      "description": "Golden crispy potato fries lightly salted to perfection.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "masala-fries",
+      "category": "Fries",
+      "name": "Masala Fries",
+      "price": 180,
+      "emoji": "🍟",
+      "photo": "",
+      "description": "Hot crispy fries tossed in tangy chatpata spice mix.",
+      "hot": true,
+      "soldOut": false
+    },
+    {
+      "id": "loaded-fries",
+      "category": "Fries",
+      "name": "Loaded Fries",
+      "price": 300,
+      "emoji": "🍟",
+      "photo": "",
+      "description": "Crispy fries topped with chicken chunks, melted cheese and sauces.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "cold-drink",
+      "category": "Drinks",
+      "name": "Cold Drink",
+      "price": 80,
+      "emoji": "🥤",
+      "photo": "",
+      "description": "Chilled soft drink bottle served ice cold.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "mint-margarita",
+      "category": "Drinks",
+      "name": "Mint Margarita",
+      "price": 150,
+      "emoji": "🍹",
+      "photo": "",
+      "description": "Refreshing crushed mint and lime cooler with a fizzy twist.",
+      "hot": false,
+      "soldOut": false
+    },
+    {
+      "id": "lassi",
+      "category": "Drinks",
+      "name": "Lassi",
+      "price": 120,
+      "emoji": "🥛",
+      "photo": "",
+      "description": "Traditional chilled creamy yogurt lassi made fresh daily.",
+      "hot": true,
+      "soldOut": false
+    }
+  ],
+  "offers": [
+    {
+      "code": "MS10",
+      "discount": 10,
+      "minOrder": 0,
+      "textUr": "Har order par 10% discount hasil karein.",
+      "textEn": "Get 10% off on every order."
+    },
+    {
+      "code": "FAMILY15",
+      "discount": 15,
+      "minOrder": 1500,
+      "textUr": "Rs. 1,500 ya is se zyada ke order par 15% discount.",
+      "textEn": "Get 15% off on orders of Rs. 1,500 or more."
+    }
+  ],
+  "special": {
+    "ur": "Garam, tazah aur lazeez khana: abhi order karein!",
+    "en": "Hot, fresh and delicious food: order now!"
+  },
+  "settings": {
+    "shopName": "MS FOODS",
+    "address": "Guru Chak 23/SP",
+    "whatsapp": "923084306520",
+    "apkUrl": "",
+    "openTime": "11:00",
+    "closeTime": "23:00",
+    "deliveryFee": 0,
+    "minOrder": 0,
+    "shopMode": "auto"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "./",
+  "name": "MS FOODS",
+  "short_name": "MS FOODS",
+  "description": "MS FOODS - Fresh & delicious fast food in Guru Chak 23/SP, Pakistan.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#c8102e",
+  "background_color": "#fff8f0",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

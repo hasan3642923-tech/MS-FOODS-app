@@ -1,0 +1,3711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>MS FOODS — Guru Chak 23/SP</title>
+  <meta name="description" content="MS FOODS - Fresh & delicious fast food in Guru Chak 23/SP, Pakistan." />
+  <meta property="og:title" content="MS FOODS" />
+  <meta property="og:description" content="MS FOODS - Fresh & delicious fast food in Guru Chak 23/SP, Pakistan." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#c8102e" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="MS FOODS" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --surface: #ffffff;
+      --surface-2: #f6ede4;
+      --text: #1b1412;
+      --text-muted: #5e524e;
+      --border: rgba(27, 20, 18, 0.1);
+      --red: #c8102e;
+      --red-dark: #a20c24;
+      --yellow: #ffb703;
+      --yellow-ink: #1b1412;
+      --yellow-soft: #fff2cc;
+      --green: #147d3f;
+      --green-soft: #e6f5ec;
+      --danger: #b91c1c;
+      --danger-soft: #fee2e2;
+      --warn-bg: #fff3cd;
+      --warn-text: #664d03;
+      --warn-border: #ffe69c;
+      --shadow: 0 2px 10px rgba(27, 20, 18, 0.06);
+      --radius: 16px;
+      --radius-sm: 12px;
+    }
+
+    :root.dark {
+      --bg: #120f0f;
+      --surface: #1d1818;
+      --surface-2: #292222;
+      --text: #f5efec;
+      --text-muted: #b8aba6;
+      --border: rgba(255, 255, 255, 0.11);
+      --red: #d91e3a;
+      --red-dark: #b3122a;
+      --yellow: #ffb703;
+      --yellow-ink: #1b1412;
+      --yellow-soft: rgba(255, 183, 3, 0.16);
+      --green: #22c55e;
+      --green-soft: rgba(34, 197, 94, 0.16);
+      --danger: #f87171;
+      --danger-soft: rgba(239, 68, 68, 0.18);
+      --warn-bg: rgba(255, 183, 3, 0.14);
+      --warn-text: #ffd166;
+      --warn-border: rgba(255, 183, 3, 0.32);
+      --shadow: 0 2px 14px rgba(0, 0, 0, 0.38);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, a:focus-visible {
+      outline: 2px solid var(--yellow);
+      outline-offset: 2px;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Sticky Red Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: #c8102e;
+      color: #ffffff;
+      padding: calc(8px + env(safe-area-inset-top, 0px)) calc(14px + env(safe-area-inset-right, 0px)) 8px calc(14px + env(safe-area-inset-left, 0px));
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 40px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ffb703;
+      color: #c8102e;
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .lang-toggle-btn {
+      min-height: 36px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 150ms ease, transform 120ms ease;
+    }
+
+    .lang-toggle-btn:active {
+      transform: scale(0.96);
+    }
+
+    .lang-toggle-btn .lang-active {
+      color: #ffb703;
+    }
+
+    /* Main Content */
+    .app-main {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px calc(14px + env(safe-area-inset-right, 0px)) calc(80px + env(safe-area-inset-bottom, 0px)) calc(14px + env(safe-area-inset-left, 0px));
+    }
+
+    .section-gap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 4px 0 8px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .link-btn {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--red);
+      padding: 6px 4px;
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    /* Hero */
+    .hero-card {
+      background: linear-gradient(135deg, #c8102e 0%, #9b0b22 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 18px 16px;
+      box-shadow: 0 6px 20px rgba(200, 16, 46, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 100%;
+    }
+
+    .status-chip.open {
+      background: #ffb703;
+      color: #1b1412;
+    }
+
+    .status-chip.closed {
+      background: rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .hero-hours {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .hero-tagline {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .btn {
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform 120ms ease, opacity 150ms ease, background 150ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    .btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: #ffffff;
+    }
+
+    .btn-yellow {
+      background: #ffb703;
+      color: #1b1412;
+    }
+
+    .btn-secondary {
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-danger {
+      background: var(--danger-soft);
+      color: var(--danger);
+      border: 1px solid rgba(185, 28, 28, 0.2);
+    }
+
+    .btn-sm {
+      min-height: 38px;
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+
+    /* Special Banner */
+    .special-banner {
+      background: var(--yellow-soft);
+      border: 1px solid rgba(255, 183, 3, 0.45);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .special-icon {
+      font-size: 22px;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .special-label {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 2px;
+    }
+
+    .special-text {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Horizontal Offers Row on Home */
+    .h-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .h-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .offer-mini {
+      flex: 0 0 230px;
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .offer-code-tag {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--yellow-ink);
+      font-weight: 800;
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Grids for Items */
+    .items-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 640px) {
+      .items-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 900px) {
+      .items-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .item-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .item-card.sold-out {
+      opacity: 0.78;
+    }
+
+    .item-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      min-width: 0;
+    }
+
+    .item-media {
+      width: 68px;
+      height: 68px;
+      border-radius: 14px;
+      background: var(--surface-2);
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .item-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item-emoji {
+      font-size: 34px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .item-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .item-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .item-name {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+      word-break: break-word;
+    }
+
+    .item-meta {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .item-desc {
+      margin: 4px 0 0;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .fav-btn {
+      min-width: 36px;
+      min-height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .fav-btn.active {
+      color: var(--red);
+    }
+
+    .item-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+    }
+
+    .item-price {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--red);
+    }
+
+    .sold-badge {
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: var(--surface-2);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 800;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .qty-stepper {
+      display: inline-flex;
+      align-items: center;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      min-width: 40px;
+      min-height: 40px;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--red);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:active {
+      background: rgba(200, 16, 46, 0.12);
+    }
+
+    .qty-val {
+      min-width: 28px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* Search & Category Chips */
+    .search-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 40px 10px 38px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-clear {
+      position: absolute;
+      right: 6px;
+      min-width: 34px;
+      min-height: 34px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .chips-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 2px 0 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .chip-btn {
+      min-height: 40px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .chip-btn.active {
+      background: var(--red);
+      color: #ffffff;
+      border-color: var(--red);
+    }
+
+    /* Cart & Forms */
+    .alert-box {
+      border-radius: var(--radius-sm);
+      padding: 11px 13px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .alert-warn {
+      background: var(--warn-bg);
+      color: var(--warn-text);
+      border: 1px solid var(--warn-border);
+    }
+
+    .alert-danger {
+      background: var(--danger-soft);
+      color: var(--danger);
+      border: 1px solid rgba(185, 28, 28, 0.25);
+    }
+
+    .alert-info {
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .input, .textarea, .select {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-size: 14px;
+    }
+
+    .textarea {
+      min-height: 76px;
+      resize: vertical;
+    }
+
+    .segmented {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      padding: 4px;
+      background: var(--surface-2);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .segmented-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .seg-btn {
+      min-height: 42px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      padding: 6px 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .seg-btn.active {
+      background: var(--red);
+      color: #ffffff;
+    }
+
+    .seg-btn.active-open {
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    .seg-btn.active-closed {
+      background: var(--red);
+      color: #ffffff;
+    }
+
+    .seg-btn.active-auto {
+      background: var(--yellow);
+      color: #1b1412;
+    }
+
+    .summary-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 4px 0;
+    }
+
+    .summary-total {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--red);
+      border-top: 1px solid var(--border);
+      margin-top: 6px;
+      padding-top: 8px;
+    }
+
+    .cart-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item-row:last-child {
+      border-bottom: none;
+    }
+
+    .inline-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .inline-row > .input {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 400px) {
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Stars */
+    .stars-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .star-btn {
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 12px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      font-size: 20px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .star-btn.active {
+      background: var(--yellow-soft);
+      border-color: var(--yellow);
+      color: #d97706;
+    }
+
+    /* Fixed Bottom Navigation (6 tabs) */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      padding: 2px env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-tab {
+      min-height: 56px;
+      padding: 5px 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      position: relative;
+      min-width: 0;
+    }
+
+    .nav-tab.active {
+      color: var(--red);
+    }
+
+    .nav-icon-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-label {
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.1;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 4px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #1b1412;
+      font-size: 10px;
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--surface);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+      transform: translateX(-50%) translateY(16px);
+      width: calc(100% - 28px);
+      max-width: 460px;
+      background: #1b1412;
+      color: #ffffff;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+      text-align: center;
+    }
+
+    :root.dark .toast {
+      background: #ffb703;
+      color: #1b1412;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background: rgba(0, 0, 0, 0.56);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      width: 100%;
+      max-width: 380px;
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-title {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .modal-msg {
+      margin: 0 0 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .owner-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .owner-row:last-child {
+      border-bottom: none;
+    }
+
+    .owner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--red);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 28px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .empty-emoji {
+      font-size: 44px;
+      line-height: 1;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 12px 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-wrap">
+        <div class="brand-mark" aria-hidden="true">MS</div>
+        <h1 class="brand-title" id="header-shop-name">MS FOODS</h1>
+      </div>
+      <button type="button" class="lang-toggle-btn" id="header-lang-btn" aria-label="Switch language">
+        <span id="header-lang-label">EN / اردو</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-main" id="app-main"></main>
+
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Main navigation"></nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-box">
+      <h3 class="modal-title" id="confirm-title"></h3>
+      <p class="modal-msg" id="confirm-msg"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary btn-sm" id="confirm-cancel"></button>
+        <button type="button" class="btn btn-primary btn-sm" id="confirm-ok"></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================================
+       MS FOODS — CONFIGURATION
+       Edit these values before deploying, or manage them from the Owner Panel.
+       - WHATSAPP: International format without "+" (e.g. 923084306520)
+       - SHEET_CSV_URL: Optional published Google Sheet CSV for menu items
+       - STATUS_CSV_URL: Optional published Google Sheet CSV for live Open/Closed status
+       - APK_URL: Optional HTTPS link to your Android APK
+       ========================================================================= */
+    const CONFIG = {
+      SHOP_NAME: "MS FOODS",
+      ADDRESS: "Guru Chak 23/SP",
+      WHATSAPP: "923084306520",
+      APK_URL: "",
+      ADMIN_PIN: "1234",
+      OPEN_TIME: "11:00",
+      CLOSE_TIME: "23:00",
+      DELIVERY_FEE: 0,
+      MIN_ORDER: 0,
+      SHEET_CSV_URL: "",
+      STATUS_CSV_URL: "",
+      VERSION: "1.2.0"
+    };
+
+    /* =========================================================================
+       BUILT-IN DEFAULT DATA (Fallback when offline & no menu-data.json cached)
+       ========================================================================= */
+    const DEFAULT_DATA = {
+      menu: [
+        { id: "zinger-burger", category: "Burgers", name: "Zinger Burger", price: 350, emoji: "🍔", photo: "", description: "Crispy fried chicken fillet with fresh lettuce and signature sauce.", hot: true, soldOut: false },
+        { id: "chicken-burger", category: "Burgers", name: "Chicken Burger", price: 280, emoji: "🍔", photo: "", description: "Tender grilled chicken patty served in a toasted bun.", hot: false, soldOut: false },
+        { id: "beef-burger", category: "Burgers", name: "Beef Burger", price: 380, emoji: "🍔", photo: "", description: "Juicy seasoned beef patty with cheese and house dressing.", hot: false, soldOut: false },
+        { id: "chicken-paratha-roll", category: "Rolls", name: "Chicken Paratha Roll", price: 250, emoji: "🌯", photo: "", description: "Flaky golden paratha wrapped around spiced chicken boti and chutney.", hot: true, soldOut: false },
+        { id: "zinger-paratha-roll", category: "Rolls", name: "Zinger Paratha Roll", price: 300, emoji: "🌯", photo: "", description: "Crunchy zinger strips rolled in warm paratha with garlic mayo.", hot: false, soldOut: false },
+        { id: "seekh-kabab-roll", category: "Rolls", name: "Seekh Kabab Roll", price: 280, emoji: "🌯", photo: "", description: "Charcoal-grilled seekh kabab wrapped with onions and mint raita.", hot: false, soldOut: false },
+        { id: "plain-fries", category: "Fries", name: "Plain Fries", price: 150, emoji: "🍟", photo: "", description: "Golden crispy potato fries lightly salted to perfection.", hot: false, soldOut: false },
+        { id: "masala-fries", category: "Fries", name: "Masala Fries", price: 180, emoji: "🍟", photo: "", description: "Hot crispy fries tossed in tangy chatpata spice mix.", hot: true, soldOut: false },
+        { id: "loaded-fries", category: "Fries", name: "Loaded Fries", price: 300, emoji: "🍟", photo: "", description: "Crispy fries topped with chicken chunks, melted cheese and sauces.", hot: false, soldOut: false },
+        { id: "cold-drink", category: "Drinks", name: "Cold Drink", price: 80, emoji: "🥤", photo: "", description: "Chilled soft drink bottle served ice cold.", hot: false, soldOut: false },
+        { id: "mint-margarita", category: "Drinks", name: "Mint Margarita", price: 150, emoji: "🍹", photo: "", description: "Refreshing crushed mint and lime cooler with a fizzy twist.", hot: false, soldOut: false },
+        { id: "lassi", category: "Drinks", name: "Lassi", price: 120, emoji: "🥛", photo: "", description: "Traditional chilled creamy yogurt lassi made fresh daily.", hot: true, soldOut: false }
+      ],
+      offers: [
+        { code: "MS10", discount: 10, minOrder: 0, textUr: "Har order par 10% discount hasil karein.", textEn: "Get 10% off on every order." },
+        { code: "FAMILY15", discount: 15, minOrder: 1500, textUr: "Rs. 1,500 ya is se zyada ke order par 15% discount.", textEn: "Get 15% off on orders of Rs. 1,500 or more." }
+      ],
+      special: {
+        ur: "Garam, tazah aur lazeez khana: abhi order karein!",
+        en: "Hot, fresh and delicious food: order now!"
+      },
+      settings: {
+        shopName: CONFIG.SHOP_NAME,
+        address: CONFIG.ADDRESS,
+        whatsapp: CONFIG.WHATSAPP,
+        apkUrl: CONFIG.APK_URL,
+        openTime: CONFIG.OPEN_TIME,
+        closeTime: CONFIG.CLOSE_TIME,
+        deliveryFee: CONFIG.DELIVERY_FEE,
+        minOrder: CONFIG.MIN_ORDER,
+        shopMode: "auto"
+      }
+    };
+
+    /* =========================================================================
+       STORAGE KEYS & SAFE LOCALSTORAGE HELPERS
+       ========================================================================= */
+    const STORAGE_KEYS = {
+      LANG: "msfoods_lang",
+      THEME: "msfoods_theme",
+      CART: "msfoods_cart",
+      COUPON: "msfoods_coupon",
+      FAVS: "msfoods_favs",
+      CUSTOMER: "msfoods_customer",
+      HISTORY: "msfoods_history",
+      OWNER_DATA: "msfoods_owner_data",
+      OWNER_PIN: "msfoods_owner_pin",
+      CACHED_DATA: "msfoods_cached_data"
+    };
+
+    function safeGet(key, fallback) {
+      try {
+        const val = window.localStorage.getItem(key);
+        return val === null ? fallback : val;
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function safeSet(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function safeRemove(key) {
+      try {
+        window.localStorage.removeItem(key);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function safeGetJSON(key, fallback) {
+      try {
+        const raw = safeGet(key, null);
+        if (!raw) return fallback;
+        return JSON.parse(raw);
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function safeSetJSON(key, obj) {
+      try {
+        return safeSet(key, JSON.stringify(obj));
+      } catch (e) {
+        return false;
+      }
+    }
+
+    /* =========================================================================
+       BILINGUAL TRANSLATIONS (Roman Urdu default & English)
+       ========================================================================= */
+    const I18N = {
+      ur: {
+        navHome: "Home",
+        navMenu: "Menu",
+        navCart: "Cart",
+        navOffers: "Offers",
+        navShop: "Shop",
+        navSettings: "Settings",
+        openChip: "Khula hai",
+        closedChip: "Band hai",
+        tagline: "Tazah aur lazeez fast food • Guru Chak 23/SP",
+        orderNow: "Order Karein",
+        todaysSpecial: "Aaj Ka Special",
+        todaysOffers: "Aaj Ke Offers",
+        popularItems: "Pasandeeda Items",
+        seeAll: "Sab Dekhein",
+        searchPlaceholder: "Khana ya category talash karein...",
+        allCat: "Sab",
+        favCat: "Pasandeeda",
+        addBtn: "Add",
+        soldOut: "Khatam",
+        noItemsFound: "Koi item nahi mila.",
+        cartTitle: "Aapka Cart",
+        emptyCartTitle: "Aapka cart khali hai",
+        emptyCartMsg: "Menu se apna pasandeeda khana shamil karein.",
+        goToMenu: "Menu Dekhein",
+        couponPlaceholder: "Coupon code likhein",
+        applyBtn: "Lagayein",
+        removeBtn: "Hatayein",
+        couponApplied: "Coupon lag gaya: ",
+        couponRemoved: "Coupon hata diya gaya.",
+        couponInvalid: "Yeh coupon code ghalat hai.",
+        couponMinOrder: "Is coupon ke liye kam az kam order: ",
+        subTotal: "Sub Total",
+        discountLabel: "Discount",
+        deliveryCharges: "Delivery Charges",
+        freeText: "Muft",
+        totalLabel: "Total",
+        deliveryType: "Delivery",
+        pickupType: "Pickup",
+        pickupNote: "Aap shop se khud order lenge:",
+        nameLabel: "Aapka Naam",
+        namePlaceholder: "Apna naam likhein",
+        phoneLabel: "Phone Number",
+        phonePlaceholder: "03xxxxxxxxx",
+        addressLabel: "Mukammal Pata",
+        addressPlaceholder: "Ghar / Gali / Chak number likhein",
+        noteLabel: "Khas Hidayat (Optional)",
+        notePlaceholder: "Mirch kam, extra sauce waghera...",
+        orderWaBtn: "Order Karein (WhatsApp)",
+        clearCartBtn: "Cart Khali Karein",
+        closedBlockMsg: "Shop abhi band hai, is waqt order nahi liya ja raha. Shop khulne par order karein.",
+        autoClosedSoftMsg: "Shop abhi band hai. Aap order bhej sakte hain, shop khulne par jawab dega.",
+        minOrderWarn: "Kam az kam order amount: ",
+        errSoldOutInCart: "Cart mein mojood koi item khatam ho chuka hai. Pehle usay hatayein.",
+        errNameRequired: "Baraye meharbani apna naam likhein.",
+        errPhoneInvalid: "Kam az kam 10 digits ka sahih phone number likhein.",
+        errAddressRequired: "Delivery ke liye mukammal pata likhein.",
+        errWaInvalid: "Shop ka WhatsApp number durust nahi hai.",
+        orderSentPrefix: "Order sent: ",
+        cartCleared: "Cart khali kar diya gaya.",
+        historyTitle: "Pichle Orders",
+        noHistory: "Abhi tak koi order nahi diya gaya.",
+        orderAgainBtn: "Dobara Order Karein",
+        orderAgainDone: "Items cart mein shamil ho gaye.",
+        orderAgainSkipped: "Available items shamil ho gaye; kuch khatam ya maujood nahi thay.",
+        orderAgainAllGone: "Is order ke sab items khatam ya maujood nahi hain.",
+        offersTitle: "Tamam Offers & Coupons",
+        useCodeBtn: "Code Istemaal Karein",
+        minOrderTag: "Kam az kam order: ",
+        noMinOrderTag: "Har order par valid",
+        offText: "% Off",
+        shopTitle: "Hamari Shop",
+        openingHoursLabel: "Khulne ke Auqat",
+        callShopBtn: "Call Karein",
+        mapsBtn: "Google Maps Par Dekhein",
+        shareAppBtn: "WhatsApp Par Share Karein",
+        shareText: "MS FOODS (Guru Chak 23/SP) se tazah fast food order karein!",
+        reviewTitle: "Apni Raye Dein",
+        ratingRequired: "Stars chunein (1 se 5)",
+        reviewTextLabel: "Aapka Paigham",
+        reviewPlaceholder: "Khane aur service ke baray mein likhein...",
+        sendReviewBtn: "WhatsApp Par Review Bhejein",
+        errSelectRating: "Baraye meharbani 1 se 5 stars chunein.",
+        settingsTitle: "Settings",
+        installAppBtn: "App Install Karein",
+        installHint: "Browser ke menu se 'Add to Home screen' chunein.",
+        installDone: "App install ho rahi hai.",
+        downloadApkBtn: "APK Download Karein",
+        apkSoonToast: "APK jald aa raha hai",
+        languageLabel: "Zaban / Language",
+        themeLabel: "Theme",
+        lightMode: "Light",
+        darkMode: "Dark",
+        aboutTitle: "App Ke Baray Mein",
+        versionLabel: "Version",
+        ownerTitle: "Owner Panel",
+        pinPlaceholder: "Owner PIN likhein",
+        unlockBtn: "Unlock Karein",
+        lockBtn: "Lock Karein",
+        wrongPin: "PIN ghalat hai.",
+        unlockedToast: "Owner panel khul gaya.",
+        lockedToast: "Owner panel lock ho gaya.",
+        shopStatusCardTitle: "Shop Khuli ya Band (Mode)",
+        modeKhula: "Khula",
+        modeBand: "Band",
+        modeAuto: "Auto",
+        currentStatusLabel: "Mojooda Halat:",
+        autoExplain: "Auto mode mein shop khulne aur band hone ke waqt ke mutabiq khud khulti aur band hoti hai.",
+        sheetStatusNote: "Google Sheet status active hai — status wahin se control ho raha hai, local tabdeeli customers tak nahi pohnchegi.",
+        localStatusNote: "Yeh tabdeeli sirf is phone par save hai. Customers ko dikhane ke liye menu-data.json download kar ke upload karein, ya Google Sheet status istemaal karein.",
+        shopSettingsTitle: "Shop Settings",
+        waNumberLabel: "WhatsApp Number (92... ya 03...)",
+        apkUrlLabel: "APK Link (https://...)",
+        deliveryFeeLabel: "Delivery Fee (Rs.)",
+        minOrderLabel: "Minimum Order (Rs.)",
+        openTimeLabel: "Khulne Ka Waqt",
+        closeTimeLabel: "Band Hone Ka Waqt",
+        specialUrLabel: "Today's Special (Roman Urdu)",
+        specialEnLabel: "Today's Special (English)",
+        newPinLabel: "Naya PIN (4-8 digits, optional)",
+        saveSettingsBtn: "Settings Save Karein",
+        settingsSaved: "Shop settings save ho gayin.",
+        errInvalidWa: "Sahih WhatsApp number likhein (e.g. 03084306520 ya 923084306520).",
+        errInvalidApk: "APK link https:// se shuru hona chahiye.",
+        errInvalidPin: "Naya PIN 4 se 8 digits ka hona chahiye.",
+        menuManagerTitle: "Menu Manager",
+        addItemTitle: "Naya Item Shamil Karein",
+        editItemTitle: "Item Edit Karein",
+        itemNameLabel: "Item Ka Naam",
+        itemCatLabel: "Category",
+        itemPriceLabel: "Qeemat (Rs.)",
+        itemEmojiLabel: "Emoji",
+        itemPhotoLabel: "Photo URL (Optional)",
+        itemDescLabel: "Tafseel (Description)",
+        itemHotLabel: "Popular (Hot) Item",
+        saveItemBtn: "Item Save Karein",
+        cancelEditBtn: "Cancel",
+        itemSavedToast: "Item save ho gaya.",
+        itemDeletedToast: "Item delete ho gaya.",
+        errItemFields: "Item ka naam, category aur sahih qeemat likhein.",
+        markSoldOut: "Khatam Karein",
+        markAvailable: "Available Karein",
+        editBtn: "Edit",
+        deleteBtn: "Delete",
+        offersManagerTitle: "Offers Manager",
+        addOfferTitle: "Naya Coupon Shamil Karein",
+        editOfferTitle: "Coupon Edit Karein",
+        offerCodeLabel: "Coupon Code",
+        offerDiscountLabel: "Discount % (1-100)",
+        offerMinLabel: "Minimum Order (Rs.)",
+        offerTextUrLabel: "Tafseel (Roman Urdu)",
+        offerTextEnLabel: "Tafseel (English)",
+        saveOfferBtn: "Coupon Save Karein",
+        offerSavedToast: "Coupon save ho gaya.",
+        offerDeletedToast: "Coupon delete ho gaya.",
+        errOfferFields: "Sahih code, 1-100% discount aur dono zabanon mein tafseel likhein.",
+        errDuplicateCode: "Yeh coupon code pehle se maujood hai.",
+        dataToolsTitle: "Data Export / Import",
+        downloadDataBtn: "Download menu-data.json",
+        copyDataBtn: "Copy Data",
+        importDataBtn: "Import menu-data.json",
+        resetDataBtn: "Reset Local Changes",
+        dataCopied: "Data clipboard par copy ho gaya.",
+        dataImported: "Data import ho gaya.",
+        dataInvalid: "Invalid menu-data.json file.",
+        dataReset: "Local tabdeeliyan reset ho gayin.",
+        confirmDeleteTitle: "Delete Karein?",
+        confirmDeleteItemMsg: "Kya aap waqai is item ko delete karna chahte hain?",
+        confirmDeleteOfferMsg: "Kya aap waqai is coupon ko delete karna chahte hain?",
+        confirmResetTitle: "Reset Karein?",
+        confirmResetMsg: "Tamam local owner tabdeeliyan khatam ho jayengi. Jari rakhein?",
+        confirmYes: "Haan",
+        confirmNo: "Nahi",
+        addedToCart: "Cart mein shamil ho gaya.",
+        favAdded: "Pasandeeda mein shamil ho gaya.",
+        favRemoved: "Pasandeeda se hata diya gaya."
+      },
+      en: {
+        navHome: "Home",
+        navMenu: "Menu",
+        navCart: "Cart",
+        navOffers: "Offers",
+        navShop: "Shop",
+        navSettings: "Settings",
+        openChip: "Open",
+        closedChip: "Closed",
+        tagline: "Fresh & delicious fast food • Guru Chak 23/SP",
+        orderNow: "Order Now",
+        todaysSpecial: "Today's Special",
+        todaysOffers: "Today's Offers",
+        popularItems: "Popular Items",
+        seeAll: "See All",
+        searchPlaceholder: "Search food or category...",
+        allCat: "All",
+        favCat: "Favorites",
+        addBtn: "Add",
+        soldOut: "Sold Out",
+        noItemsFound: "No items found.",
+        cartTitle: "Your Cart",
+        emptyCartTitle: "Your cart is empty",
+        emptyCartMsg: "Add your favorite food from the menu.",
+        goToMenu: "Browse Menu",
+        couponPlaceholder: "Enter coupon code",
+        applyBtn: "Apply",
+        removeBtn: "Remove",
+        couponApplied: "Coupon applied: ",
+        couponRemoved: "Coupon removed.",
+        couponInvalid: "Invalid coupon code.",
+        couponMinOrder: "Minimum order for this coupon: ",
+        subTotal: "Sub Total",
+        discountLabel: "Discount",
+        deliveryCharges: "Delivery Charges",
+        freeText: "Free",
+        totalLabel: "Total",
+        deliveryType: "Delivery",
+        pickupType: "Pickup",
+        pickupNote: "Pickup from shop address:",
+        nameLabel: "Your Name",
+        namePlaceholder: "Enter your name",
+        phoneLabel: "Phone Number",
+        phonePlaceholder: "03xxxxxxxxx",
+        addressLabel: "Full Address",
+        addressPlaceholder: "House / Street / Chak number",
+        noteLabel: "Special Instructions (Optional)",
+        notePlaceholder: "Less spicy, extra sauce, etc...",
+        orderWaBtn: "Order Now (WhatsApp)",
+        clearCartBtn: "Clear Cart",
+        closedBlockMsg: "Shop is currently closed and not accepting orders. Please order when the shop opens.",
+        autoClosedSoftMsg: "Shop is currently closed. You can still send your order; we will respond when the shop opens.",
+        minOrderWarn: "Minimum order required: ",
+        errSoldOutInCart: "An item in your cart is sold out. Please remove it first.",
+        errNameRequired: "Please enter your name.",
+        errPhoneInvalid: "Please enter a valid phone number (at least 10 digits).",
+        errAddressRequired: "Please enter your full delivery address.",
+        errWaInvalid: "Shop WhatsApp number is invalid.",
+        orderSentPrefix: "Order sent: ",
+        cartCleared: "Cart cleared.",
+        historyTitle: "Order History",
+        noHistory: "No orders placed yet.",
+        orderAgainBtn: "Order Again",
+        orderAgainDone: "Items added to your cart.",
+        orderAgainSkipped: "Available items added; some items were unavailable or sold out.",
+        orderAgainAllGone: "All items from this order are unavailable or sold out.",
+        offersTitle: "All Offers & Coupons",
+        useCodeBtn: "Use Code",
+        minOrderTag: "Min order: ",
+        noMinOrderTag: "Valid on any order",
+        offText: "% Off",
+        shopTitle: "Our Shop",
+        openingHoursLabel: "Opening Hours",
+        callShopBtn: "Call Shop",
+        mapsBtn: "Open in Google Maps",
+        shareAppBtn: "Share this app on WhatsApp",
+        shareText: "Order fresh fast food from MS FOODS (Guru Chak 23/SP)!",
+        reviewTitle: "Leave a Review",
+        ratingRequired: "Select Rating (1 to 5 stars)",
+        reviewTextLabel: "Your Review",
+        reviewPlaceholder: "Tell us about your food & experience...",
+        sendReviewBtn: "Send Review on WhatsApp",
+        errSelectRating: "Please select 1 to 5 stars.",
+        settingsTitle: "Settings",
+        installAppBtn: "Install App",
+        installHint: "Use your browser menu and tap 'Add to Home screen'.",
+        installDone: "Installing app...",
+        downloadApkBtn: "Download APK",
+        apkSoonToast: "APK coming soon",
+        languageLabel: "Language / Zaban",
+        themeLabel: "Theme",
+        lightMode: "Light",
+        darkMode: "Dark",
+        aboutTitle: "About",
+        versionLabel: "Version",
+        ownerTitle: "Owner Panel",
+        pinPlaceholder: "Enter Owner PIN",
+        unlockBtn: "Unlock",
+        lockBtn: "Lock",
+        wrongPin: "Incorrect PIN.",
+        unlockedToast: "Owner panel unlocked.",
+        lockedToast: "Owner panel locked.",
+        shopStatusCardTitle: "Shop Open or Closed",
+        modeKhula: "Open",
+        modeBand: "Closed",
+        modeAuto: "Auto",
+        currentStatusLabel: "Current Status:",
+        autoExplain: "In Auto mode, the shop opens and closes automatically based on your opening and closing hours.",
+        sheetStatusNote: "Google Sheet status is active — remote sheet controls the status, so local changes will not reach customers.",
+        localStatusNote: "Saved on this phone only. Customers will see this after you replace and re-upload menu-data.json, or when using a Google Sheet status.",
+        shopSettingsTitle: "Shop Settings",
+        waNumberLabel: "WhatsApp Number (92... or 03...)",
+        apkUrlLabel: "APK Link (https://...)",
+        deliveryFeeLabel: "Delivery Fee (Rs.)",
+        minOrderLabel: "Minimum Order (Rs.)",
+        openTimeLabel: "Opening Time",
+        closeTimeLabel: "Closing Time",
+        specialUrLabel: "Today's Special (Roman Urdu)",
+        specialEnLabel: "Today's Special (English)",
+        newPinLabel: "New PIN (4-8 digits, optional)",
+        saveSettingsBtn: "Save Settings",
+        settingsSaved: "Shop settings saved.",
+        errInvalidWa: "Enter a valid WhatsApp number (e.g. 03084306520 or 923084306520).",
+        errInvalidApk: "APK link must start with https://",
+        errInvalidPin: "New PIN must be 4 to 8 digits.",
+        menuManagerTitle: "Menu Manager",
+        addItemTitle: "Add New Item",
+        editItemTitle: "Edit Item",
+        itemNameLabel: "Item Name",
+        itemCatLabel: "Category",
+        itemPriceLabel: "Price (Rs.)",
+        itemEmojiLabel: "Emoji",
+        itemPhotoLabel: "Photo URL (Optional)",
+        itemDescLabel: "Description",
+        itemHotLabel: "Popular (Hot) Item",
+        saveItemBtn: "Save Item",
+        cancelEditBtn: "Cancel",
+        itemSavedToast: "Item saved.",
+        itemDeletedToast: "Item deleted.",
+        errItemFields: "Enter item name, category, and a valid price.",
+        markSoldOut: "Mark Sold Out",
+        markAvailable: "Mark Available",
+        editBtn: "Edit",
+        deleteBtn: "Delete",
+        offersManagerTitle: "Offers Manager",
+        addOfferTitle: "Add New Coupon",
+        editOfferTitle: "Edit Coupon",
+        offerCodeLabel: "Coupon Code",
+        offerDiscountLabel: "Discount % (1-100)",
+        offerMinLabel: "Minimum Order (Rs.)",
+        offerTextUrLabel: "Description (Roman Urdu)",
+        offerTextEnLabel: "Description (English)",
+        saveOfferBtn: "Save Coupon",
+        offerSavedToast: "Coupon saved.",
+        offerDeletedToast: "Coupon deleted.",
+        errOfferFields: "Enter a valid code, 1-100% discount, and descriptions in both languages.",
+        errDuplicateCode: "This coupon code already exists.",
+        dataToolsTitle: "Data Export / Import",
+        downloadDataBtn: "Download menu-data.json",
+        copyDataBtn: "Copy Data",
+        importDataBtn: "Import menu-data.json",
+        resetDataBtn: "Reset Local Changes",
+        dataCopied: "Data copied to clipboard.",
+        dataImported: "Data imported successfully.",
+        dataInvalid: "Invalid menu-data.json file.",
+        dataReset: "Local changes reset.",
+        confirmDeleteTitle: "Delete?",
+        confirmDeleteItemMsg: "Are you sure you want to delete this menu item?",
+        confirmDeleteOfferMsg: "Are you sure you want to delete this coupon?",
+        confirmResetTitle: "Reset Changes?",
+        confirmResetMsg: "This will clear all local owner changes on this phone. Continue?",
+        confirmYes: "Yes",
+        confirmNo: "No",
+        addedToCart: "Added to cart.",
+        favAdded: "Added to favorites.",
+        favRemoved: "Removed from favorites."
+      }
+    };
+
+    /* =========================================================================
+       APPLICATION STATE
+       ========================================================================= */
+    const state = {
+      lang: safeGet(STORAGE_KEYS.LANG, "ur") === "en" ? "en" : "ur",
+      theme: safeGet(STORAGE_KEYS.THEME, "light") === "dark" ? "dark" : "light",
+      tab: "home",
+      searchQuery: "",
+      selectedCategory: "all",
+      menu: JSON.parse(JSON.stringify(DEFAULT_DATA.menu)),
+      offers: JSON.parse(JSON.stringify(DEFAULT_DATA.offers)),
+      special: JSON.parse(JSON.stringify(DEFAULT_DATA.special)),
+      settings: JSON.parse(JSON.stringify(DEFAULT_DATA.settings)),
+      remoteStatus: null, // 'open' | 'closed' | 'auto' | null
+      cart: safeGetJSON(STORAGE_KEYS.CART, {}),
+      appliedCoupon: safeGet(STORAGE_KEYS.COUPON, "") || "",
+      favorites: safeGetJSON(STORAGE_KEYS.FAVS, []),
+      customer: Object.assign(
+        { type: "delivery", name: "", phone: "", address: "", note: "" },
+        safeGetJSON(STORAGE_KEYS.CUSTOMER, {})
+      ),
+      history: safeGetJSON(STORAGE_KEYS.HISTORY, []),
+      reviewRating: 0,
+      reviewText: "",
+      ownerUnlocked: false,
+      editingItemId: null,
+      editingOfferCode: null,
+      deferredPrompt: null,
+      pendingRenderAfterInput: false
+    };
+
+    if (!Array.isArray(state.favorites)) state.favorites = [];
+    if (!Array.isArray(state.history)) state.history = [];
+    if (!state.cart || typeof state.cart !== "object") state.cart = {};
+
+    function t(key) {
+      return (I18N[state.lang] && I18N[state.lang][key]) || I18N.en[key] || key;
+    }
+
+    /* =========================================================================
+       SECURITY & FORMATTING UTILITIES
+       ========================================================================= */
+    function escapeHtml(val) {
+      return String(val == null ? "" : val)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function sanitizeUrl(url) {
+      const s = String(url || "").trim();
+      if (!s) return "";
+      if (/^https?:\/\//i.test(s) || s.startsWith("./") || s.startsWith("/")) {
+        return s;
+      }
+      return "";
+    }
+
+    function formatPrice(amount) {
+      const n = Math.round(Number(amount) || 0);
+      return "Rs. " + n;
+    }
+
+    function slugify(str) {
+      return String(str || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || ("item-" + Date.now());
+    }
+
+    function normalizeWhatsApp(raw) {
+      let digits = String(raw || "").replace(/\D/g, "");
+      if (digits.startsWith("03") && digits.length === 11) {
+        digits = "92" + digits.slice(1);
+      } else if (digits.startsWith("00")) {
+        digits = digits.slice(2);
+      }
+      return digits;
+    }
+
+    function isValidWhatsApp(digits) {
+      return /^\d{10,15}$/.test(String(digits || ""));
+    }
+
+    function parseMinutes(hhmm) {
+      const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || "").trim());
+      if (!m) return null;
+      const h = Number(m[1]);
+      const min = Number(m[2]);
+      if (h < 0 || h > 23 || min < 0 || min > 59) return null;
+      return h * 60 + min;
+    }
+
+    function format12Hour(hhmm) {
+      const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || "").trim());
+      if (!m) return String(hhmm || "");
+      let h = Number(m[1]);
+      const min = m[2];
+      const suffix = h >= 12 ? "PM" : "AM";
+      h = h % 12;
+      if (h === 0) h = 12;
+      return h + ":" + min + " " + suffix;
+    }
+
+    function isWithinHours(openTime, closeTime, nowDate) {
+      const openM = parseMinutes(openTime);
+      const closeM = parseMinutes(closeTime);
+      if (openM === null || closeM === null) return true;
+      if (openM === closeM) return true; // Equal times mean always open
+      const nowM = nowDate.getHours() * 60 + nowDate.getMinutes();
+      if (openM < closeM) {
+        return nowM >= openM && nowM < closeM;
+      }
+      // Overnight closing time (e.g. 18:00 to 02:00)
+      return nowM >= openM || nowM < closeM;
+    }
+
+    function getEffectiveShopState() {
+      const validModes = ["auto", "open", "closed"];
+      const localMode = validModes.includes(state.settings.shopMode) ? state.settings.shopMode : "auto";
+      const activeMode = validModes.includes(state.remoteStatus) ? state.remoteStatus : localMode;
+
+      if (activeMode === "open") {
+        return { mode: "open", isOpen: true, isBlocked: false, showSoftClosedWarning: false };
+      }
+      if (activeMode === "closed") {
+        return { mode: "closed", isOpen: false, isBlocked: true, showSoftClosedWarning: false };
+      }
+      const openNow = isWithinHours(state.settings.openTime, state.settings.closeTime, new Date());
+      return {
+        mode: "auto",
+        isOpen: openNow,
+        isBlocked: false,
+        showSoftClosedWarning: !openNow
+      };
+    }
+
+    /* =========================================================================
+       CSV PARSER (BOM, CRLF, Quoted Fields, Commas in Quotes, Doubled Quotes)
+       ========================================================================= */
+    function parseCSV(rawText) {
+      let text = String(rawText || "");
+      if (text.charCodeAt(0) === 0xfeff) {
+        text = text.slice(1);
+      }
+      const rows = [];
+      let row = [];
+      let field = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (inQuotes) {
+          if (ch === '"') {
+            if (text[i + 1] === '"') {
+              field += '"';
+              i++;
+            } else {
+              inQuotes = false;
+            }
+          } else {
+            field += ch;
+          }
+        } else {
+          if (ch === '"') {
+            inQuotes = true;
+          } else if (ch === ",") {
+            row.push(field);
+            field = "";
+          } else if (ch === "\r") {
+            if (text[i + 1] === "\n") i++;
+            row.push(field);
+            if (row.some((c) => c.trim() !== "")) rows.push(row);
+            row = [];
+            field = "";
+          } else if (ch === "\n") {
+            row.push(field);
+            if (row.some((c) => c.trim() !== "")) rows.push(row);
+            row = [];
+            field = "";
+          } else {
+            field += ch;
+          }
+        }
+      }
+      row.push(field);
+      if (row.some((c) => c.trim() !== "")) rows.push(row);
+      return rows;
+    }
+
+    function recognizeStatusWord(cell) {
+      const s = String(cell || "").trim().toLowerCase();
+      if (!s) return null;
+      if (s === "open" || s === "khula" || s === "khula hai" || s === "on") return "open";
+      if (s === "closed" || s === "close" || s === "band" || s === "band hai" || s === "off") return "closed";
+      if (s === "auto") return "auto";
+      return null;
+    }
+
+    function parseStatusCSV(text) {
+      const rows = parseCSV(text);
+      if (!rows.length) return null;
+
+      // Priority 1: row whose first cell is "shop", "status", or "mode"
+      for (let r = 0; r < rows.length; r++) {
+        const first = String(rows[r][0] || "").trim().toLowerCase();
+        if (first === "shop" || first === "status" || first === "mode") {
+          const val = recognizeStatusWord(rows[r][1]);
+          if (val) return val;
+        }
+      }
+
+      // Priority 2: first recognised word found (skip header row if > 1 row)
+      const startRow = rows.length > 1 ? 1 : 0;
+      for (let r = startRow; r < rows.length; r++) {
+        for (let c = 0; c < rows[r].length; c++) {
+          const val = recognizeStatusWord(rows[r][c]);
+          if (val) return val;
+        }
+      }
+      return null;
+    }
+
+    function parseBoolFlag(val) {
+      const s = String(val || "").trim().toLowerCase();
+      return s === "yes" || s === "true" || s === "1" || s === "haan";
+    }
+
+    function parsePriceValue(raw) {
+      const str = String(raw == null ? "" : raw).trim().replace(/,/g, "");
+      const m = str.match(/(\d+(?:\.\d+)?)/);
+      if (!m) return NaN;
+      const num = parseFloat(m[1]);
+      return Number.isFinite(num) && num >= 0 ? Math.round(num) : NaN;
+    }
+
+    function parseMenuCSV(text) {
+      const rows = parseCSV(text);
+      if (!rows.length) return [];
+
+      let startIdx = 0;
+      const firstRowJoined = rows[0].map((c) => String(c || "").trim().toLowerCase());
+      if (firstRowJoined.includes("name") && firstRowJoined.includes("price")) {
+        startIdx = 1;
+      }
+
+      const items = [];
+      const seenIds = new Set();
+      for (let i = startIdx; i < rows.length; i++) {
+        const r = rows[i];
+        const category = String(r[0] || "").trim() || "Menu";
+        const name = String(r[1] || "").trim();
+        const price = parsePriceValue(r[2]);
+        if (!name || Number.isNaN(price)) continue;
+        const emoji = String(r[3] || "").trim() || "🍽️";
+        const description = String(r[4] || "").trim();
+        const hot = parseBoolFlag(r[5]);
+        const soldOut = parseBoolFlag(r[6]);
+        let id = slugify(name);
+        if (seenIds.has(id)) id = id + "-" + i;
+        seenIds.add(id);
+        items.push({ id, category, name, price, emoji, photo: "", description, hot, soldOut });
+      }
+      return items;
+    }
+
+    /* =========================================================================
+       DATA VALIDATION, LOADING ORDER & PERSISTENCE
+       ========================================================================= */
+    function isValidShopMode(m) {
+      return m === "auto" || m === "open" || m === "closed";
+    }
+
+    function validateAndNormalizeData(raw) {
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+      if (!Array.isArray(raw.menu) || raw.menu.length === 0) return null;
+
+      const menu = [];
+      const usedIds = new Set();
+      for (let i = 0; i < raw.menu.length; i++) {
+        const it = raw.menu[i];
+        if (!it || typeof it !== "object") return null;
+        const name = String(it.name || "").trim();
+        const price = Number(it.price);
+        if (!name || !Number.isFinite(price) || price < 0) return null;
+        let id = String(it.id || "").trim() || slugify(name);
+        if (usedIds.has(id)) id = id + "-" + i;
+        usedIds.add(id);
+        menu.push({
+          id,
+          category: String(it.category || "Menu").trim() || "Menu",
+          name,
+          price: Math.round(price),
+          emoji: String(it.emoji || "🍽️").trim() || "🍽️",
+          photo: sanitizeUrl(it.photo || ""),
+          description: String(it.description || "").trim(),
+          hot: Boolean(it.hot),
+          soldOut: Boolean(it.soldOut)
+        });
+      }
+
+      const offers = [];
+      if (raw.offers !== undefined) {
+        if (!Array.isArray(raw.offers)) return null;
+        const seenCodes = new Set();
+        for (let i = 0; i < raw.offers.length; i++) {
+          const o = raw.offers[i];
+          if (!o || typeof o !== "object") continue;
+          const code = String(o.code || "").trim().toUpperCase();
+          const discount = Number(o.discount);
+          const minOrder = Math.max(0, Math.round(Number(o.minOrder || 0)));
+          if (!code || !Number.isFinite(discount) || discount < 1 || discount > 100 || seenCodes.has(code)) continue;
+          seenCodes.add(code);
+          offers.push({
+            code,
+            discount: Math.round(discount),
+            minOrder: Number.isFinite(minOrder) ? minOrder : 0,
+            textUr: String(o.textUr || "").trim(),
+            textEn: String(o.textEn || "").trim()
+          });
+        }
+      }
+
+      const sp = raw.special && typeof raw.special === "object" ? raw.special : {};
+      const special = {
+        ur: String(sp.ur || DEFAULT_DATA.special.ur).trim() || DEFAULT_DATA.special.ur,
+        en: String(sp.en || DEFAULT_DATA.special.en).trim() || DEFAULT_DATA.special.en
+      };
+
+      const st = raw.settings && typeof raw.settings === "object" ? raw.settings : {};
+      const rawMode = st.shopMode !== undefined ? st.shopMode : (st.mode !== undefined ? st.mode : raw.mode);
+      const shopMode = isValidShopMode(rawMode) ? rawMode : "auto";
+
+      const wa = normalizeWhatsApp(st.whatsapp || CONFIG.WHATSAPP);
+      const settings = {
+        shopName: String(st.shopName || CONFIG.SHOP_NAME).trim() || CONFIG.SHOP_NAME,
+        address: String(st.address || CONFIG.ADDRESS).trim() || CONFIG.ADDRESS,
+        whatsapp: isValidWhatsApp(wa) ? wa : CONFIG.WHATSAPP,
+        apkUrl: /^https:\/\//i.test(String(st.apkUrl || "").trim()) ? String(st.apkUrl).trim() : (CONFIG.APK_URL || ""),
+        openTime: parseMinutes(st.openTime) !== null ? String(st.openTime).trim() : CONFIG.OPEN_TIME,
+        closeTime: parseMinutes(st.closeTime) !== null ? String(st.closeTime).trim() : CONFIG.CLOSE_TIME,
+        deliveryFee: Number.isFinite(Number(st.deliveryFee)) && Number(st.deliveryFee) >= 0 ? Math.round(Number(st.deliveryFee)) : CONFIG.DELIVERY_FEE,
+        minOrder: Number.isFinite(Number(st.minOrder)) && Number(st.minOrder) >= 0 ? Math.round(Number(st.minOrder)) : CONFIG.MIN_ORDER,
+        shopMode
+      };
+
+      return { menu, offers, special, settings };
+    }
+
+    function applyLoadedData(data, saveCache) {
+      state.menu = data.menu;
+      state.offers = data.offers;
+      state.special = data.special;
+      state.settings = data.settings;
+      if (saveCache) {
+        safeSetJSON(STORAGE_KEYS.CACHED_DATA, data);
+      }
+    }
+
+    function exportPayload() {
+      return {
+        menu: state.menu,
+        offers: state.offers,
+        special: state.special,
+        settings: Object.assign({}, state.settings, {
+          shopMode: isValidShopMode(state.settings.shopMode) ? state.settings.shopMode : "auto"
+        })
+      };
+    }
+
+    function saveOwnerData() {
+      const payload = exportPayload();
+      safeSetJSON(STORAGE_KEYS.OWNER_DATA, payload);
+      safeSetJSON(STORAGE_KEYS.CACHED_DATA, payload);
+    }
+
+    function isUserTyping() {
+      const el = document.activeElement;
+      if (!el) return false;
+      const tag = el.tagName;
+      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+    }
+
+    function scheduleSafeRender() {
+      if (isUserTyping()) {
+        state.pendingRenderAfterInput = true;
+      } else {
+        state.pendingRenderAfterInput = false;
+        render();
+      }
+    }
+
+    async function loadInitialData() {
+      // 1. Owner's local changes in localStorage, if present
+      const ownerRaw = safeGetJSON(STORAGE_KEYS.OWNER_DATA, null);
+      const ownerValid = validateAndNormalizeData(ownerRaw);
+      if (ownerValid) {
+        applyLoadedData(ownerValid, true);
+        scheduleSafeRender();
+        return;
+      }
+
+      // Pre-load last cached data for instant offline/startup UI while fetching
+      const cachedRaw = safeGetJSON(STORAGE_KEYS.CACHED_DATA, null);
+      const cachedValid = validateAndNormalizeData(cachedRaw);
+      if (cachedValid) {
+        applyLoadedData(cachedValid, false);
+        scheduleSafeRender();
+      }
+
+      // 2. Fetch menu-data.json from the same site (cache: no-store)
+      try {
+        const res = await fetch("./menu-data.json?_t=" + Date.now(), { cache: "no-store" });
+        if (res.ok) {
+          const json = await res.json();
+          const validJson = validateAndNormalizeData(json);
+          if (validJson) {
+            applyLoadedData(validJson, true);
+          }
+        }
+      } catch (e) {
+        // Ignore network/offline errors and keep cached/default data
+      }
+
+      // 3. If SHEET_CSV_URL is set, fetch published Google Sheet CSV and replace menu
+      const sheetUrl = String(CONFIG.SHEET_CSV_URL || "").trim();
+      if (sheetUrl) {
+        try {
+          const sep = sheetUrl.includes("?") ? "&" : "?";
+          const res = await fetch(sheetUrl + sep + "_t=" + Date.now(), { cache: "no-store" });
+          if (res.ok) {
+            const csvText = await res.text();
+            const parsedMenu = parseMenuCSV(csvText);
+            if (parsedMenu.length > 0) {
+              state.menu = parsedMenu;
+              safeSetJSON(STORAGE_KEYS.CACHED_DATA, exportPayload());
+            }
+          }
+        } catch (e) {
+          // Ignore network errors
+        }
+      }
+
+      scheduleSafeRender();
+    }
+
+    async function fetchRemoteStatus() {
+      const statusUrl = String(CONFIG.STATUS_CSV_URL || "").trim();
+      if (!statusUrl) return;
+      try {
+        const sep = statusUrl.includes("?") ? "&" : "?";
+        const res = await fetch(statusUrl + sep + "_t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) return;
+        const txt = await res.text();
+        const recognized = parseStatusCSV(txt);
+        if (!recognized) return;
+        if (state.remoteStatus !== recognized) {
+          state.remoteStatus = recognized;
+          scheduleSafeRender();
+        }
+      } catch (e) {
+        // Ignore network errors and keep last good status
+      }
+    }
+
+    /* =========================================================================
+       TOAST & CONFIRMATION MODAL
+       ========================================================================= */
+    let toastTimer = null;
+    function showToast(msg) {
+      const el = document.getElementById("toast");
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.add("show");
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.remove("show");
+      }, 3400);
+    }
+
+    let confirmResolver = null;
+    function showConfirm(title, msg) {
+      return new Promise((resolve) => {
+        confirmResolver = resolve;
+        const modal = document.getElementById("confirm-modal");
+        document.getElementById("confirm-title").textContent = title;
+        document.getElementById("confirm-msg").textContent = msg;
+        document.getElementById("confirm-cancel").textContent = t("confirmNo");
+        document.getElementById("confirm-ok").textContent = t("confirmYes");
+        modal.classList.add("open");
+      });
+    }
+
+    function closeConfirm(result) {
+      const modal = document.getElementById("confirm-modal");
+      modal.classList.remove("open");
+      if (confirmResolver) {
+        const fn = confirmResolver;
+        confirmResolver = null;
+        fn(result);
+      }
+    }
+
+    document.getElementById("confirm-cancel").addEventListener("click", () => closeConfirm(false));
+    document.getElementById("confirm-ok").addEventListener("click", () => closeConfirm(true));
+    document.getElementById("confirm-modal").addEventListener("click", (e) => {
+      if (e.target.id === "confirm-modal") closeConfirm(false);
+    });
+
+    /* =========================================================================
+       CART, COUPONS, FAVORITES & ORDER ACTIONS
+       ========================================================================= */
+    function getCartEntries() {
+      const list = [];
+      for (const id of Object.keys(state.cart)) {
+        const qty = Number(state.cart[id]) || 0;
+        if (qty <= 0) continue;
+        const item = state.menu.find((m) => m.id === id);
+        if (item) {
+          list.push({ item, qty });
+        }
+      }
+      return list;
+    }
+
+    function getCartCount() {
+      let total = 0;
+      for (const id of Object.keys(state.cart)) {
+        const qty = Number(state.cart[id]) || 0;
+        if (qty > 0 && state.menu.some((m) => m.id === id)) {
+          total += qty;
+        }
+      }
+      return total;
+    }
+
+    function getCartTotals() {
+      const entries = getCartEntries();
+      let subTotal = 0;
+      for (const entry of entries) {
+        subTotal += entry.item.price * entry.qty;
+      }
+
+      let coupon = null;
+      let discountAmount = 0;
+      if (state.appliedCoupon) {
+        const found = state.offers.find((o) => o.code.toUpperCase() === state.appliedCoupon.toUpperCase());
+        if (found && subTotal >= found.minOrder) {
+          coupon = found;
+          discountAmount = Math.round((subTotal * found.discount) / 100);
+        }
+      }
+
+      const isPickup = state.customer.type === "pickup";
+      const deliveryFee = isPickup ? 0 : (Number(state.settings.deliveryFee) || 0);
+      const total = Math.max(0, subTotal - discountAmount + deliveryFee);
+      return { entries, subTotal, coupon, discountAmount, deliveryFee, total };
+    }
+
+    function saveCart() {
+      safeSetJSON(STORAGE_KEYS.CART, state.cart);
+    }
+
+    function addToCart(itemId) {
+      const item = state.menu.find((m) => m.id === itemId);
+      if (!item || item.soldOut) return;
+      state.cart[itemId] = (Number(state.cart[itemId]) || 0) + 1;
+      saveCart();
+      render();
+    }
+
+    function changeQty(itemId, delta) {
+      const item = state.menu.find((m) => m.id === itemId);
+      if (delta > 0 && (!item || item.soldOut)) return;
+      const next = (Number(state.cart[itemId]) || 0) + delta;
+      if (next <= 0) {
+        delete state.cart[itemId];
+      } else {
+        state.cart[itemId] = next;
+      }
+      saveCart();
+      render();
+    }
+
+    function clearCart() {
+      state.cart = {};
+      state.appliedCoupon = "";
+      saveCart();
+      safeRemove(STORAGE_KEYS.COUPON);
+      showToast(t("cartCleared"));
+      render();
+    }
+
+    function toggleFavorite(itemId) {
+      const idx = state.favorites.indexOf(itemId);
+      if (idx >= 0) {
+        state.favorites.splice(idx, 1);
+        showToast(t("favRemoved"));
+      } else {
+        state.favorites.push(itemId);
+        showToast(t("favAdded"));
+      }
+      safeSetJSON(STORAGE_KEYS.FAVS, state.favorites);
+      if (state.tab === "menu" && state.searchQuery.trim() !== "") {
+        renderMenuResultsOnly();
+      } else {
+        render();
+      }
+    }
+
+    function applyCouponCode(rawCode, switchToCart) {
+      const code = String(rawCode || "").trim().toUpperCase();
+      if (!code) {
+        showToast(t("couponInvalid"));
+        return false;
+      }
+      const offer = state.offers.find((o) => o.code.toUpperCase() === code);
+      if (!offer) {
+        showToast(t("couponInvalid"));
+        return false;
+      }
+      const { subTotal } = getCartTotals();
+      if (offer.minOrder > 0 && subTotal < offer.minOrder) {
+        showToast(t("couponMinOrder") + formatPrice(offer.minOrder));
+        return false;
+      }
+      state.appliedCoupon = offer.code;
+      safeSet(STORAGE_KEYS.COUPON, offer.code);
+      showToast(t("couponApplied") + offer.code + " (" + offer.discount + "%)");
+      if (switchToCart) state.tab = "cart";
+      render();
+      return true;
+    }
+
+    function removeCoupon() {
+      state.appliedCoupon = "";
+      safeRemove(STORAGE_KEYS.COUPON);
+      showToast(t("couponRemoved"));
+      render();
+    }
+
+    function generateOrderNumber() {
+      const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let code = "SF-";
+      for (let i = 0; i < 5; i++) {
+        code += chars[Math.floor(Math.random() * chars.length)];
+      }
+      return code;
+    }
+
+    function placeOrder() {
+      const shopState = getEffectiveShopState();
+      // Closed mode strictly blocks ordering & keeps cart
+      if (shopState.isBlocked) {
+        showToast(t("closedBlockMsg"));
+        return;
+      }
+
+      const totals = getCartTotals();
+      if (totals.entries.length === 0) return;
+
+      // Check sold-out items
+      if (totals.entries.some((e) => e.item.soldOut)) {
+        showToast(t("errSoldOutInCart"));
+        return;
+      }
+
+      // Check min order
+      const minOrder = Number(state.settings.minOrder) || 0;
+      if (minOrder > 0 && totals.subTotal < minOrder) {
+        showToast(t("minOrderWarn") + formatPrice(minOrder));
+        return;
+      }
+
+      const name = String(state.customer.name || "").trim();
+      const phone = String(state.customer.phone || "").trim();
+      const phoneDigits = phone.replace(/\D/g, "");
+      const isDelivery = state.customer.type !== "pickup";
+      const address = String(state.customer.address || "").trim();
+      const note = String(state.customer.note || "").trim();
+
+      if (!name) {
+        showToast(t("errNameRequired"));
+        return;
+      }
+      if (phoneDigits.length < 10) {
+        showToast(t("errPhoneInvalid"));
+        return;
+      }
+      if (isDelivery && !address) {
+        showToast(t("errAddressRequired"));
+        return;
+      }
+
+      const waDigits = normalizeWhatsApp(state.settings.whatsapp || CONFIG.WHATSAPP);
+      if (!isValidWhatsApp(waDigits)) {
+        showToast(t("errWaInvalid"));
+        return;
+      }
+
+      // Save customer details for next time
+      safeSetJSON(STORAGE_KEYS.CUSTOMER, {
+        type: isDelivery ? "delivery" : "pickup",
+        name,
+        phone,
+        address,
+        note: ""
+      });
+
+      const orderNo = generateOrderNumber();
+      const lines = [];
+      lines.push("*New Order - " + state.settings.shopName + "*");
+      lines.push("Order No: " + orderNo);
+      lines.push("Type: " + (isDelivery ? "Delivery" : "Pickup"));
+      lines.push("Name: " + name);
+      lines.push("Phone: " + phone);
+      if (isDelivery) {
+        lines.push("Address: " + address);
+      }
+      lines.push("");
+
+      for (const entry of totals.entries) {
+        lines.push(entry.qty + " x " + entry.item.name + " = " + formatPrice(entry.item.price * entry.qty));
+      }
+
+      lines.push("");
+      lines.push("Sub Total: " + formatPrice(totals.subTotal));
+      if (totals.coupon && totals.discountAmount > 0) {
+        lines.push("Discount (" + totals.coupon.code + "): -" + formatPrice(totals.discountAmount));
+      }
+      if (totals.deliveryFee > 0) {
+        lines.push("Delivery Fee: " + formatPrice(totals.deliveryFee));
+      }
+      lines.push("*Total: " + formatPrice(totals.total) + "*");
+      if (note) {
+        lines.push("Note: " + note);
+      }
+
+      const message = lines.join("\n");
+      const waUrl = "https://wa.me/" + waDigits + "?text=" + encodeURIComponent(message);
+
+      // Save to Order History (keep last 10)
+      const historyEntry = {
+        orderNo,
+        date: new Date().toLocaleString(),
+        type: isDelivery ? "Delivery" : "Pickup",
+        items: totals.entries.map((e) => ({
+          id: e.item.id,
+          name: e.item.name,
+          qty: e.qty,
+          price: e.item.price
+        })),
+        total: totals.total
+      };
+      state.history.unshift(historyEntry);
+      if (state.history.length > 10) state.history = state.history.slice(0, 10);
+      safeSetJSON(STORAGE_KEYS.HISTORY, state.history);
+
+      // Clear cart and coupon
+      state.cart = {};
+      state.appliedCoupon = "";
+      state.customer.note = "";
+      saveCart();
+      safeRemove(STORAGE_KEYS.COUPON);
+      render();
+
+      showToast(t("orderSentPrefix") + orderNo);
+
+      try {
+        const win = window.open(waUrl, "_blank", "noopener");
+        if (!win) {
+          window.location.href = waUrl;
+        }
+      } catch (e) {
+        window.location.href = waUrl;
+      }
+    }
+
+    function orderAgain(orderIndex) {
+      const entry = state.history[orderIndex];
+      if (!entry || !Array.isArray(entry.items)) return;
+
+      let addedCount = 0;
+      let skippedCount = 0;
+      for (const oldItem of entry.items) {
+        const current = state.menu.find((m) => m.id === oldItem.id) ||
+                        state.menu.find((m) => m.name.toLowerCase() === String(oldItem.name || "").toLowerCase());
+        if (!current || current.soldOut) {
+          skippedCount++;
+          continue;
+        }
+        state.cart[current.id] = (Number(state.cart[current.id]) || 0) + (Number(oldItem.qty) || 1);
+        addedCount++;
+      }
+
+      saveCart();
+      render();
+
+      if (addedCount === 0) {
+        showToast(t("orderAgainAllGone"));
+      } else if (skippedCount > 0) {
+        showToast(t("orderAgainSkipped"));
+      } else {
+        showToast(t("orderAgainDone"));
+      }
+    }
+
+    /* =========================================================================
+       RENDER HELPERS
+       ========================================================================= */
+    function renderItemPicture(item) {
+      const safePhoto = sanitizeUrl(item.photo);
+      const safeEmoji = escapeHtml(item.emoji || "🍽️");
+      if (safePhoto) {
+        return (
+          '<div class="item-media">' +
+            '<img class="item-photo" src="' + escapeHtml(safePhoto) + '" alt="' + escapeHtml(item.name) + '" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\';if(this.nextElementSibling)this.nextElementSibling.style.display=\'flex\';">' +
+            '<span class="item-emoji" style="display:none">' + safeEmoji + '</span>' +
+          '</div>'
+        );
+      }
+      return '<div class="item-media"><span class="item-emoji">' + safeEmoji + '</span></div>';
+    }
+
+    function renderItemCard(item) {
+      const qty = Number(state.cart[item.id]) || 0;
+      const isFav = state.favorites.includes(item.id);
+      const heartSvg = isFav
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+
+      let actionHtml = "";
+      if (item.soldOut) {
+        actionHtml = '<span class="sold-badge">' + escapeHtml(t("soldOut")) + '</span>';
+      } else if (qty > 0) {
+        actionHtml =
+          '<div class="qty-stepper">' +
+            '<button type="button" class="qty-btn" data-action="dec" data-id="' + escapeHtml(item.id) + '" aria-label="Decrease quantity">−</button>' +
+            '<span class="qty-val tabular">' + qty + '</span>' +
+            '<button type="button" class="qty-btn" data-action="inc" data-id="' + escapeHtml(item.id) + '" aria-label="Increase quantity">+</button>' +
+          '</div>';
+      } else {
+        actionHtml =
+          '<button type="button" class="btn btn-primary btn-sm" data-action="add" data-id="' + escapeHtml(item.id) + '">' +
+            escapeHtml(t("addBtn")) +
+          '</button>';
+      }
+
+      return (
+        '<article class="item-card' + (item.soldOut ? ' sold-out' : '') + '">' +
+          '<div class="item-row">' +
+            renderItemPicture(item) +
+            '<div class="item-info">' +
+              '<div class="item-title-row">' +
+                '<h3 class="item-name">' + escapeHtml(item.name) + '</h3>' +
+                '<button type="button" class="fav-btn' + (isFav ? ' active' : '') + '" data-action="fav" data-id="' + escapeHtml(item.id) + '" aria-label="Favorite">' + heartSvg + '</button>' +
+              '</div>' +
+              '<div class="item-meta">' + escapeHtml(item.category) + (item.hot ? ' · 🔥' : '') + '</div>' +
+              (item.description ? '<p class="item-desc">' + escapeHtml(item.description) + '</p>' : '') +
+            '</div>' +
+          '</div>' +
+          '<div class="item-footer">' +
+            '<span class="item-price tabular">' + escapeHtml(formatPrice(item.price)) + '</span>' +
+            actionHtml +
+          '</div>' +
+        '</article>'
+      );
+    }
+
+    /* =========================================================================
+       SCREEN RENDERERS
+       ========================================================================= */
+    function renderHome() {
+      const shopState = getEffectiveShopState();
+      const hoursText = format12Hour(state.settings.openTime) + " – " + format12Hour(state.settings.closeTime);
+      const specialText = state.lang === "en" ? state.special.en : state.special.ur;
+      const popular = state.menu.filter((m) => m.hot);
+
+      let offersHtml = "";
+      if (state.offers.length > 0) {
+        offersHtml =
+          '<section>' +
+            '<div class="section-head">' +
+              '<h2 class="section-title">' + escapeHtml(t("todaysOffers")) + '</h2>' +
+              '<button type="button" class="link-btn" data-nav="offers">' + escapeHtml(t("seeAll")) + '</button>' +
+            '</div>' +
+            '<div class="h-scroll">' +
+              state.offers.map((o) => {
+                const desc = state.lang === "en" ? (o.textEn || o.textUr) : (o.textUr || o.textEn);
+                return (
+                  '<div class="offer-mini">' +
+                    '<div>' +
+                      '<span class="offer-code-tag">' + escapeHtml(o.code) + ' · ' + escapeHtml(o.discount) + '%</span>' +
+                      '<p class="muted" style="margin:8px 0 0;color:var(--text)">' + escapeHtml(desc) + '</p>' +
+                    '</div>' +
+                    '<button type="button" class="btn btn-secondary btn-sm btn-block" data-action="use-offer" data-code="' + escapeHtml(o.code) + '">' +
+                      escapeHtml(t("useCodeBtn")) +
+                    '</button>' +
+                  '</div>'
+                );
+              }).join("") +
+            '</div>' +
+          '</section>';
+      }
+
+      return (
+        '<div class="section-gap">' +
+          '<section class="hero-card">' +
+            '<div class="hero-top">' +
+              '<span class="status-chip ' + (shopState.isOpen ? 'open' : 'closed') + '">' +
+                escapeHtml(shopState.isOpen ? t("openChip") : t("closedChip")) +
+              '</span>' +
+              '<span class="hero-hours tabular">' + escapeHtml(hoursText) + '</span>' +
+            '</div>' +
+            '<div>' +
+              '<h2 class="hero-title">' + escapeHtml(state.settings.shopName) + '</h2>' +
+              '<p class="hero-tagline">' + escapeHtml(t("tagline")) + '</p>' +
+            '</div>' +
+            '<button type="button" class="btn btn-yellow btn-block" data-nav="menu">' +
+              escapeHtml(t("orderNow")) +
+            '</button>' +
+          '</section>' +
+
+          '<section class="special-banner">' +
+            '<span class="special-icon" aria-hidden="true">✨</span>' +
+            '<div>' +
+              '<div class="special-label">' + escapeHtml(t("todaysSpecial")) + '</div>' +
+              '<p class="special-text">' + escapeHtml(specialText) + '</p>' +
+            '</div>' +
+          '</section>' +
+
+          offersHtml +
+
+          '<section>' +
+            '<div class="section-head">' +
+              '<h2 class="section-title">' + escapeHtml(t("popularItems")) + '</h2>' +
+              '<button type="button" class="link-btn" data-nav="menu">' + escapeHtml(t("seeAll")) + '</button>' +
+            '</div>' +
+            '<div class="items-grid">' +
+              (popular.length ? popular.map(renderItemCard).join("") : '<p class="muted">' + escapeHtml(t("noItemsFound")) + '</p>') +
+            '</div>' +
+          '</section>' +
+        '</div>'
+      );
+    }
+
+    function getFilteredMenuItems() {
+      const q = state.searchQuery.trim().toLowerCase();
+      return state.menu.filter((item) => {
+        if (state.selectedCategory === "favorites") {
+          if (!state.favorites.includes(item.id)) return false;
+        } else if (state.selectedCategory !== "all") {
+          if (item.category !== state.selectedCategory) return false;
+        }
+        if (q) {
+          const hay = (item.name + " " + item.description + " " + item.category).toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderMenuResultsHtml() {
+      const items = getFilteredMenuItems();
+      if (!items.length) {
+        return '<div class="card empty-state"><div class="empty-emoji">🍽️</div><p class="muted">' + escapeHtml(t("noItemsFound")) + '</p></div>';
+      }
+      return '<div class="items-grid">' + items.map(renderItemCard).join("") + '</div>';
+    }
+
+    function renderMenuResultsOnly() {
+      const container = document.getElementById("menu-results");
+      if (container) {
+        container.innerHTML = renderMenuResultsHtml();
+      }
+      const clearBtn = document.getElementById("menu-search-clear");
+      if (clearBtn) {
+        clearBtn.classList.toggle("hidden", !state.searchQuery);
+      }
+    }
+
+    function renderMenu() {
+      const categories = [];
+      for (const m of state.menu) {
+        if (m.category && !categories.includes(m.category)) {
+          categories.push(m.category);
+        }
+      }
+
+      const chips = [
+        { key: "all", label: t("allCat") },
+        { key: "favorites", label: t("favCat") }
+      ].concat(categories.map((c) => ({ key: c, label: c })));
+
+      return (
+        '<div class="section-gap">' +
+          '<div class="search-wrap">' +
+            '<svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' +
+            '<input id="menu-search-input" class="search-input" type="search" value="' + escapeHtml(state.searchQuery) + '" placeholder="' + escapeHtml(t("searchPlaceholder")) + '" autocomplete="off" />' +
+            '<button type="button" class="search-clear' + (state.searchQuery ? '' : ' hidden') + '" id="menu-search-clear" aria-label="Clear search">✕</button>' +
+          '</div>' +
+
+          '<div class="chips-row" role="tablist" aria-label="Categories">' +
+            chips.map((c) =>
+              '<button type="button" class="chip-btn' + (state.selectedCategory === c.key ? ' active' : '') + '" data-cat="' + escapeHtml(c.key) + '">' +
+                escapeHtml(c.label) +
+              '</button>'
+            ).join("") +
+          '</div>' +
+
+          '<div id="menu-results">' + renderMenuResultsHtml() + '</div>' +
+        '</div>'
+      );
+    }
+
+    function renderCart() {
+      const shopState = getEffectiveShopState();
+      const totals = getCartTotals();
+      const isPickup = state.customer.type === "pickup";
+      const minOrder = Number(state.settings.minOrder) || 0;
+      const belowMin = minOrder > 0 && totals.subTotal < minOrder;
+
+      let statusAlert = "";
+      if (shopState.isBlocked) {
+        statusAlert = '<div class="alert-box alert-danger"><span>🚫</span><span>' + escapeHtml(t("closedBlockMsg")) + '</span></div>';
+      } else if (shopState.showSoftClosedWarning) {
+        statusAlert = '<div class="alert-box alert-warn"><span>⏰</span><span>' + escapeHtml(t("autoClosedSoftMsg")) + '</span></div>';
+      }
+
+      let cartSection = "";
+      if (totals.entries.length === 0) {
+        cartSection =
+          '<section class="card empty-state">' +
+            '<div class="empty-emoji">🛒</div>' +
+            '<h3 style="margin:0">' + escapeHtml(t("emptyCartTitle")) + '</h3>' +
+            '<p class="muted" style="margin:0">' + escapeHtml(t("emptyCartMsg")) + '</p>' +
+            '<button type="button" class="btn btn-primary" data-nav="menu">' + escapeHtml(t("goToMenu")) + '</button>' +
+          '</section>';
+      } else {
+        const itemsHtml = totals.entries.map(({ item, qty }) =>
+          '<div class="cart-item-row">' +
+            '<div style="min-width:0;flex:1">' +
+              '<div style="font-weight:800;font-size:14px">' + escapeHtml(item.emoji + " " + item.name) + '</div>' +
+              '<div class="muted tabular">' + escapeHtml(formatPrice(item.price)) + ' × ' + qty + ' = <strong>' + escapeHtml(formatPrice(item.price * qty)) + '</strong></div>' +
+              (item.soldOut ? '<div style="color:var(--danger);font-size:12px;font-weight:700">' + escapeHtml(t("soldOut")) + '</div>' : '') +
+            '</div>' +
+            '<div class="qty-stepper">' +
+              '<button type="button" class="qty-btn" data-action="dec" data-id="' + escapeHtml(item.id) + '" aria-label="Decrease">−</button>' +
+              '<span class="qty-val tabular">' + qty + '</span>' +
+              '<button type="button" class="qty-btn" data-action="inc" data-id="' + escapeHtml(item.id) + '" aria-label="Increase">+</button>' +
+            '</div>' +
+          '</div>'
+        ).join("");
+
+        const appliedOfferObj = state.appliedCoupon
+          ? state.offers.find((o) => o.code.toUpperCase() === state.appliedCoupon.toUpperCase())
+          : null;
+        const couponBelowMin = appliedOfferObj && appliedOfferObj.minOrder > 0 && totals.subTotal < appliedOfferObj.minOrder;
+
+        const couponBox =
+          '<div class="card">' +
+            '<div class="inline-row">' +
+              '<input id="cart-coupon-input" class="input" type="text" value="' + escapeHtml(state.appliedCoupon) + '" placeholder="' + escapeHtml(t("couponPlaceholder")) + '" />' +
+              (totals.coupon || state.appliedCoupon
+                ? '<button type="button" class="btn btn-secondary btn-sm" id="remove-coupon-btn">' + escapeHtml(t("removeBtn")) + '</button>'
+                : '') +
+              '<button type="button" class="btn btn-yellow btn-sm" id="apply-coupon-btn">' + escapeHtml(t("applyBtn")) + '</button>' +
+            '</div>' +
+            (couponBelowMin
+              ? '<p class="muted" style="margin:6px 0 0;color:var(--danger);font-weight:600">' + escapeHtml(t("couponMinOrder") + formatPrice(appliedOfferObj.minOrder)) + '</p>'
+              : '') +
+          '</div>';
+
+        const summaryHtml =
+          '<div class="card">' +
+            '<div class="summary-row"><span>' + escapeHtml(t("subTotal")) + '</span><span class="tabular"><strong>' + escapeHtml(formatPrice(totals.subTotal)) + '</strong></span></div>' +
+            (totals.coupon && totals.discountAmount > 0
+              ? '<div class="summary-row" style="color:var(--green)"><span>' + escapeHtml(t("discountLabel")) + ' (' + escapeHtml(totals.coupon.code) + ')</span><span class="tabular">−' + escapeHtml(formatPrice(totals.discountAmount)) + '</span></div>'
+              : '') +
+            '<div class="summary-row"><span>' + escapeHtml(t("deliveryCharges")) + '</span><span class="tabular">' + (totals.deliveryFee > 0 ? escapeHtml(formatPrice(totals.deliveryFee)) : escapeHtml(t("freeText"))) + '</span></div>' +
+            '<div class="summary-row summary-total"><span>' + escapeHtml(t("totalLabel")) + '</span><span class="tabular">' + escapeHtml(formatPrice(totals.total)) + '</span></div>' +
+            (belowMin ? '<div class="alert-box alert-warn" style="margin-top:10px"><span>⚠️</span><span>' + escapeHtml(t("minOrderWarn") + formatPrice(minOrder)) + '</span></div>' : '') +
+          '</div>';
+
+        const customerForm =
+          '<div class="card">' +
+            '<div class="form-group">' +
+              '<div class="segmented">' +
+                '<button type="button" class="seg-btn' + (!isPickup ? ' active' : '') + '" id="type-delivery-btn">' + escapeHtml(t("deliveryType")) + '</button>' +
+                '<button type="button" class="seg-btn' + (isPickup ? ' active' : '') + '" id="type-pickup-btn">' + escapeHtml(t("pickupType")) + '</button>' +
+              '</div>' +
+            '</div>' +
+            (isPickup
+              ? '<div class="alert-box alert-info" style="margin-bottom:10px"><span>📍</span><span>' + escapeHtml(t("pickupNote") + " " + state.settings.address) + '</span></div>'
+              : '') +
+            '<div class="form-group">' +
+              '<label class="form-label" for="cust-name">' + escapeHtml(t("nameLabel")) + '</label>' +
+              '<input id="cust-name" class="input" type="text" value="' + escapeHtml(state.customer.name) + '" placeholder="' + escapeHtml(t("namePlaceholder")) + '" />' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="cust-phone">' + escapeHtml(t("phoneLabel")) + '</label>' +
+              '<input id="cust-phone" class="input" type="tel" value="' + escapeHtml(state.customer.phone) + '" placeholder="' + escapeHtml(t("phonePlaceholder")) + '" />' +
+            '</div>' +
+            (!isPickup
+              ? '<div class="form-group">' +
+                  '<label class="form-label" for="cust-address">' + escapeHtml(t("addressLabel")) + '</label>' +
+                  '<input id="cust-address" class="input" type="text" value="' + escapeHtml(state.customer.address) + '" placeholder="' + escapeHtml(t("addressPlaceholder")) + '" />' +
+                '</div>'
+              : '') +
+            '<div class="form-group" style="margin-bottom:0">' +
+              '<label class="form-label" for="cust-note">' + escapeHtml(t("noteLabel")) + '</label>' +
+              '<textarea id="cust-note" class="textarea" placeholder="' + escapeHtml(t("notePlaceholder")) + '">' + escapeHtml(state.customer.note) + '</textarea>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="section-gap" style="gap:8px">' +
+            '<button type="button" class="btn btn-primary btn-block" id="place-order-btn">' + escapeHtml(t("orderWaBtn")) + '</button>' +
+            '<button type="button" class="btn btn-secondary btn-block" id="clear-cart-btn">' + escapeHtml(t("clearCartBtn")) + '</button>' +
+          '</div>';
+
+        cartSection =
+          '<section class="card">' + itemsHtml + '</section>' +
+          couponBox +
+          summaryHtml +
+          customerForm;
+      }
+
+      const historyHtml =
+        '<section class="card">' +
+          '<h3 class="section-title" style="margin-bottom:8px">' + escapeHtml(t("historyTitle")) + '</h3>' +
+          (state.history.length === 0
+            ? '<p class="muted" style="margin:0">' + escapeHtml(t("noHistory")) + '</p>'
+            : state.history.map((h, idx) =>
+                '<div class="owner-row" style="flex-direction:column;align-items:stretch">' +
+                  '<div style="display:flex;justify-content:space-between;gap:8px;align-items:center">' +
+                    '<strong class="tabular">' + escapeHtml(h.orderNo) + '</strong>' +
+                    '<span class="muted tabular">' + escapeHtml(h.date) + '</span>' +
+                  '</div>' +
+                  '<div class="muted" style="font-size:13px">' +
+                    escapeHtml((h.items || []).map((it) => it.qty + "× " + it.name).join(", ")) +
+                  '</div>' +
+                  '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:4px">' +
+                    '<strong class="tabular" style="color:var(--red)">' + escapeHtml(formatPrice(h.total)) + '</strong>' +
+                    '<button type="button" class="btn btn-secondary btn-sm" data-action="order-again" data-idx="' + idx + '">' + escapeHtml(t("orderAgainBtn")) + '</button>' +
+                  '</div>' +
+                '</div>'
+              ).join("")) +
+        '</section>';
+
+      return (
+        '<div class="section-gap">' +
+          '<h2 class="section-title">' + escapeHtml(t("cartTitle")) + '</h2>' +
+          statusAlert +
+          cartSection +
+          historyHtml +
+        '</div>'
+      );
+    }
+
+    function renderOffers() {
+      return (
+        '<div class="section-gap">' +
+          '<h2 class="section-title">' + escapeHtml(t("offersTitle")) + '</h2>' +
+          (state.offers.length === 0
+            ? '<div class="card empty-state"><p class="muted">' + escapeHtml(t("noItemsFound")) + '</p></div>'
+            : state.offers.map((o) => {
+                const desc = state.lang === "en" ? (o.textEn || o.textUr) : (o.textUr || o.textEn);
+                const minTxt = o.minOrder > 0 ? t("minOrderTag") + formatPrice(o.minOrder) : t("noMinOrderTag");
+                return (
+                  '<div class="card">' +
+                    '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px">' +
+                      '<span class="offer-code-tag">' + escapeHtml(o.code) + '</span>' +
+                      '<strong class="tabular" style="color:var(--red);font-size:16px">' + escapeHtml(o.discount + t("offText")) + '</strong>' +
+                    '</div>' +
+                    '<p style="margin:8px 0 4px;font-weight:600">' + escapeHtml(desc) + '</p>' +
+                    '<p class="muted" style="margin:0 0 10px">' + escapeHtml(minTxt) + '</p>' +
+                    '<button type="button" class="btn btn-primary btn-block btn-sm" data-action="use-offer" data-code="' + escapeHtml(o.code) + '">' +
+                      escapeHtml(t("useCodeBtn")) +
+                    '</button>' +
+                  '</div>'
+                );
+              }).join("")) +
+        '</div>'
+      );
+    }
+
+    function renderShop() {
+      const hoursText = format12Hour(state.settings.openTime) + " – " + format12Hour(state.settings.closeTime);
+      const waDigits = normalizeWhatsApp(state.settings.whatsapp || CONFIG.WHATSAPP);
+      const telHref = waDigits ? "tel:+" + waDigits : "tel:+923084306520";
+      const mapsQuery = encodeURIComponent(state.settings.shopName + ", " + state.settings.address);
+      const mapsHref = "https://www.google.com/maps/search/?api=1&query=" + mapsQuery;
+
+      return (
+        '<div class="section-gap">' +
+          '<h2 class="section-title">' + escapeHtml(t("shopTitle")) + '</h2>' +
+          '<div class="card">' +
+            '<h3 style="margin:0 0 4px;font-size:20px;font-weight:900">' + escapeHtml(state.settings.shopName) + '</h3>' +
+            '<p class="muted" style="margin:0 0 10px">📍 ' + escapeHtml(state.settings.address) + '</p>' +
+            '<p style="margin:0 0 14px;font-size:14px">🕒 <strong>' + escapeHtml(t("openingHoursLabel")) + ':</strong> <span class="tabular">' + escapeHtml(hoursText) + '</span></p>' +
+            '<div class="section-gap" style="gap:8px">' +
+              '<a class="btn btn-primary btn-block" href="' + escapeHtml(telHref) + '">📞 ' + escapeHtml(t("callShopBtn")) + '</a>' +
+              '<a class="btn btn-secondary btn-block" href="' + escapeHtml(mapsHref) + '" target="_blank" rel="noopener">🗺️ ' + escapeHtml(t("mapsBtn")) + '</a>' +
+              '<button type="button" class="btn btn-yellow btn-block" id="share-app-btn">📲 ' + escapeHtml(t("shareAppBtn")) + '</button>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:10px">' + escapeHtml(t("reviewTitle")) + '</h3>' +
+            '<div class="form-group">' +
+              '<label class="form-label">' + escapeHtml(t("ratingRequired")) + '</label>' +
+              '<div class="stars-row">' +
+                [1, 2, 3, 4, 5].map((n) =>
+                  '<button type="button" class="star-btn' + (state.reviewRating >= n ? ' active' : '') + '" data-action="star" data-star="' + n + '" aria-label="' + n + ' stars">' +
+                    (state.reviewRating >= n ? '★' : '☆') +
+                  '</button>'
+                ).join("") +
+              '</div>' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="review-text">' + escapeHtml(t("reviewTextLabel")) + '</label>' +
+              '<textarea id="review-text" class="textarea" placeholder="' + escapeHtml(t("reviewPlaceholder")) + '">' + escapeHtml(state.reviewText) + '</textarea>' +
+            '</div>' +
+            '<button type="button" class="btn btn-primary btn-block" id="send-review-btn">' + escapeHtml(t("sendReviewBtn")) + '</button>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    function renderShopModeCard() {
+      const shopState = getEffectiveShopState();
+      const localMode = isValidShopMode(state.settings.shopMode) ? state.settings.shopMode : "auto";
+      const activeMode = isValidShopMode(state.remoteStatus) ? state.remoteStatus : localMode;
+      const isRemote = isValidShopMode(state.remoteStatus);
+
+      return (
+        '<div class="card">' +
+          '<h3 class="section-title" style="margin-bottom:6px">' + escapeHtml(t("shopStatusCardTitle")) + '</h3>' +
+          '<p class="muted" style="margin:0 0 10px">' +
+            escapeHtml(t("currentStatusLabel")) + ' <strong>' + escapeHtml(shopState.isOpen ? t("openChip") : t("closedChip")) + '</strong> (' + escapeHtml(activeMode.toUpperCase()) + ')' +
+          '</p>' +
+          '<div class="segmented segmented-3" style="margin-bottom:10px">' +
+            '<button type="button" class="seg-btn' + (activeMode === 'open' ? ' active-open' : '') + '" data-action="shop-mode" data-mode="open">' + escapeHtml(t("modeKhula")) + '</button>' +
+            '<button type="button" class="seg-btn' + (activeMode === 'closed' ? ' active-closed' : '') + '" data-action="shop-mode" data-mode="closed">' + escapeHtml(t("modeBand")) + '</button>' +
+            '<button type="button" class="seg-btn' + (activeMode === 'auto' ? ' active-auto' : '') + '" data-action="shop-mode" data-mode="auto">' + escapeHtml(t("modeAuto")) + '</button>' +
+          '</div>' +
+          '<p class="muted" style="margin:0 0 8px">' + escapeHtml(t("autoExplain")) + '</p>' +
+          '<div class="alert-box alert-info">' +
+            '<span>ℹ️</span><span>' + escapeHtml(isRemote ? t("sheetStatusNote") : t("localStatusNote")) + '</span>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    function renderOwnerPanel() {
+      const categories = [];
+      for (const m of state.menu) {
+        if (m.category && !categories.includes(m.category)) categories.push(m.category);
+      }
+
+      const editingItem = state.editingItemId ? state.menu.find((m) => m.id === state.editingItemId) : null;
+      const editingOffer = state.editingOfferCode ? state.offers.find((o) => o.code === state.editingOfferCode) : null;
+
+      return (
+        '<div class="section-gap">' +
+          renderShopModeCard() +
+
+          /* Shop Settings Form */
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:10px">' + escapeHtml(t("shopSettingsTitle")) + '</h3>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="own-wa">' + escapeHtml(t("waNumberLabel")) + '</label>' +
+              '<input id="own-wa" class="input" type="tel" value="' + escapeHtml(state.settings.whatsapp) + '" />' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="own-apk">' + escapeHtml(t("apkUrlLabel")) + '</label>' +
+              '<input id="own-apk" class="input" type="url" value="' + escapeHtml(state.settings.apkUrl) + '" placeholder="https://..." />' +
+            '</div>' +
+            '<div class="grid-2">' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="own-fee">' + escapeHtml(t("deliveryFeeLabel")) + '</label>' +
+                '<input id="own-fee" class="input" type="number" min="0" value="' + escapeHtml(state.settings.deliveryFee) + '" />' +
+              '</div>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="own-min">' + escapeHtml(t("minOrderLabel")) + '</label>' +
+                '<input id="own-min" class="input" type="number" min="0" value="' + escapeHtml(state.settings.minOrder) + '" />' +
+              '</div>' +
+            '</div>' +
+            '<div class="grid-2">' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="own-open">' + escapeHtml(t("openTimeLabel")) + '</label>' +
+                '<input id="own-open" class="input" type="time" value="' + escapeHtml(state.settings.openTime) + '" />' +
+              '</div>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="own-close">' + escapeHtml(t("closeTimeLabel")) + '</label>' +
+                '<input id="own-close" class="input" type="time" value="' + escapeHtml(state.settings.closeTime) + '" />' +
+              '</div>' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="own-sp-ur">' + escapeHtml(t("specialUrLabel")) + '</label>' +
+              '<input id="own-sp-ur" class="input" type="text" value="' + escapeHtml(state.special.ur) + '" />' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="own-sp-en">' + escapeHtml(t("specialEnLabel")) + '</label>' +
+              '<input id="own-sp-en" class="input" type="text" value="' + escapeHtml(state.special.en) + '" />' +
+            '</div>' +
+            '<div class="form-group">' +
+              '<label class="form-label" for="own-pin">' + escapeHtml(t("newPinLabel")) + '</label>' +
+              '<input id="own-pin" class="input" type="password" inputmode="numeric" maxlength="8" placeholder="••••" />' +
+            '</div>' +
+            '<button type="button" class="btn btn-primary btn-block" id="own-save-settings-btn">' + escapeHtml(t("saveSettingsBtn")) + '</button>' +
+          '</div>' +
+
+          /* Menu Manager */
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:10px">' + escapeHtml(t("menuManagerTitle")) + '</h3>' +
+            '<div style="background:var(--surface-2);padding:12px;border-radius:12px;margin-bottom:12px">' +
+              '<strong style="display:block;margin-bottom:8px">' + escapeHtml(editingItem ? t("editItemTitle") : t("addItemTitle")) + '</strong>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="item-name">' + escapeHtml(t("itemNameLabel")) + '</label>' +
+                '<input id="item-name" class="input" type="text" value="' + escapeHtml(editingItem ? editingItem.name : "") + '" />' +
+              '</div>' +
+              '<div class="grid-2">' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="item-cat">' + escapeHtml(t("itemCatLabel")) + '</label>' +
+                  '<input id="item-cat" class="input" list="cat-suggestions" type="text" value="' + escapeHtml(editingItem ? editingItem.category : "") + '" />' +
+                  '<datalist id="cat-suggestions">' +
+                    categories.map((c) => '<option value="' + escapeHtml(c) + '"></option>').join("") +
+                  '</datalist>' +
+                '</div>' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="item-price">' + escapeHtml(t("itemPriceLabel")) + '</label>' +
+                  '<input id="item-price" class="input" type="number" min="0" value="' + escapeHtml(editingItem ? editingItem.price : "") + '" />' +
+                '</div>' +
+              '</div>' +
+              '<div class="grid-2">' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="item-emoji">' + escapeHtml(t("itemEmojiLabel")) + '</label>' +
+                  '<input id="item-emoji" class="input" type="text" value="' + escapeHtml(editingItem ? editingItem.emoji : "🍔") + '" />' +
+                '</div>' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="item-photo">' + escapeHtml(t("itemPhotoLabel")) + '</label>' +
+                  '<input id="item-photo" class="input" type="url" value="' + escapeHtml(editingItem ? editingItem.photo : "") + '" placeholder="https://..." />' +
+                '</div>' +
+              '</div>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="item-desc">' + escapeHtml(t("itemDescLabel")) + '</label>' +
+                '<textarea id="item-desc" class="textarea">' + escapeHtml(editingItem ? editingItem.description : "") + '</textarea>' +
+              '</div>' +
+              '<label class="checkbox-row">' +
+                '<input id="item-hot" type="checkbox"' + (editingItem && editingItem.hot ? ' checked' : '') + ' />' +
+                '<span>' + escapeHtml(t("itemHotLabel")) + '</span>' +
+              '</label>' +
+              '<div class="inline-row" style="margin-top:8px">' +
+                '<button type="button" class="btn btn-primary btn-sm" style="flex:1" id="own-save-item-btn">' + escapeHtml(t("saveItemBtn")) + '</button>' +
+                (editingItem ? '<button type="button" class="btn btn-secondary btn-sm" id="own-cancel-item-btn">' + escapeHtml(t("cancelEditBtn")) + '</button>' : '') +
+              '</div>' +
+            '</div>' +
+
+            '<div>' +
+              state.menu.map((m) =>
+                '<div class="owner-row" style="flex-direction:column;align-items:stretch">' +
+                  '<div style="display:flex;justify-content:space-between;gap:8px;align-items:center">' +
+                    '<strong style="min-width:0;word-break:break-word">' + escapeHtml(m.emoji + " " + m.name) + '</strong>' +
+                    '<span class="tabular" style="font-weight:800;color:var(--red);white-space:nowrap">' + escapeHtml(formatPrice(m.price)) + '</span>' +
+                  '</div>' +
+                  '<div class="muted" style="font-size:12px">' + escapeHtml(m.category) + (m.soldOut ? ' · ' + escapeHtml(t("soldOut")) : '') + '</div>' +
+                  '<div class="owner-actions" style="margin-top:6px">' +
+                    '<button type="button" class="btn btn-secondary btn-sm" data-action="own-toggle-sold" data-id="' + escapeHtml(m.id) + '">' + escapeHtml(m.soldOut ? t("markAvailable") : t("markSoldOut")) + '</button>' +
+                    '<button type="button" class="btn btn-secondary btn-sm" data-action="own-edit-item" data-id="' + escapeHtml(m.id) + '">' + escapeHtml(t("editBtn")) + '</button>' +
+                    '<button type="button" class="btn btn-danger btn-sm" data-action="own-del-item" data-id="' + escapeHtml(m.id) + '">' + escapeHtml(t("deleteBtn")) + '</button>' +
+                  '</div>' +
+                '</div>'
+              ).join("") +
+            '</div>' +
+          '</div>' +
+
+          /* Offers Manager */
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:10px">' + escapeHtml(t("offersManagerTitle")) + '</h3>' +
+            '<div style="background:var(--surface-2);padding:12px;border-radius:12px;margin-bottom:12px">' +
+              '<strong style="display:block;margin-bottom:8px">' + escapeHtml(editingOffer ? t("editOfferTitle") : t("addOfferTitle")) + '</strong>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="offer-code">' + escapeHtml(t("offerCodeLabel")) + '</label>' +
+                '<input id="offer-code" class="input" type="text" style="text-transform:uppercase" value="' + escapeHtml(editingOffer ? editingOffer.code : "") + '" />' +
+              '</div>' +
+              '<div class="grid-2">' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="offer-discount">' + escapeHtml(t("offerDiscountLabel")) + '</label>' +
+                  '<input id="offer-discount" class="input" type="number" min="1" max="100" value="' + escapeHtml(editingOffer ? editingOffer.discount : "") + '" />' +
+                '</div>' +
+                '<div class="form-group">' +
+                  '<label class="form-label" for="offer-min">' + escapeHtml(t("offerMinLabel")) + '</label>' +
+                  '<input id="offer-min" class="input" type="number" min="0" value="' + escapeHtml(editingOffer ? editingOffer.minOrder : 0) + '" />' +
+                '</div>' +
+              '</div>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="offer-ur">' + escapeHtml(t("offerTextUrLabel")) + '</label>' +
+                '<input id="offer-ur" class="input" type="text" value="' + escapeHtml(editingOffer ? editingOffer.textUr : "") + '" />' +
+              '</div>' +
+              '<div class="form-group">' +
+                '<label class="form-label" for="offer-en">' + escapeHtml(t("offerTextEnLabel")) + '</label>' +
+                '<input id="offer-en" class="input" type="text" value="' + escapeHtml(editingOffer ? editingOffer.textEn : "") + '" />' +
+              '</div>' +
+              '<div class="inline-row">' +
+                '<button type="button" class="btn btn-primary btn-sm" style="flex:1" id="own-save-offer-btn">' + escapeHtml(t("saveOfferBtn")) + '</button>' +
+                (editingOffer ? '<button type="button" class="btn btn-secondary btn-sm" id="own-cancel-offer-btn">' + escapeHtml(t("cancelEditBtn")) + '</button>' : '') +
+              '</div>' +
+            '</div>' +
+
+            '<div>' +
+              state.offers.map((o) =>
+                '<div class="owner-row">' +
+                  '<div style="min-width:0">' +
+                    '<strong>' + escapeHtml(o.code) + ' · ' + escapeHtml(o.discount) + '%</strong>' +
+                    '<div class="muted">' + escapeHtml(t("minOrderTag") + formatPrice(o.minOrder)) + '</div>' +
+                  '</div>' +
+                  '<div class="owner-actions">' +
+                    '<button type="button" class="btn btn-secondary btn-sm" data-action="own-edit-offer" data-code="' + escapeHtml(o.code) + '">' + escapeHtml(t("editBtn")) + '</button>' +
+                    '<button type="button" class="btn btn-danger btn-sm" data-action="own-del-offer" data-code="' + escapeHtml(o.code) + '">' + escapeHtml(t("deleteBtn")) + '</button>' +
+                  '</div>' +
+                '</div>'
+              ).join("") +
+            '</div>' +
+          '</div>' +
+
+          /* Export / Import / Reset */
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:10px">' + escapeHtml(t("dataToolsTitle")) + '</h3>' +
+            '<div class="section-gap" style="gap:8px">' +
+              '<button type="button" class="btn btn-primary btn-block" id="own-download-btn">' + escapeHtml(t("downloadDataBtn")) + '</button>' +
+              '<button type="button" class="btn btn-secondary btn-block" id="own-copy-btn">' + escapeHtml(t("copyDataBtn")) + '</button>' +
+              '<button type="button" class="btn btn-secondary btn-block" id="own-import-btn">' + escapeHtml(t("importDataBtn")) + '</button>' +
+              '<input id="own-import-file" type="file" accept=".json,application/json" class="hidden" />' +
+              '<button type="button" class="btn btn-danger btn-block" id="own-reset-btn">' + escapeHtml(t("resetDataBtn")) + '</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    function renderSettings() {
+      return (
+        '<div class="section-gap">' +
+          '<h2 class="section-title">' + escapeHtml(t("settingsTitle")) + '</h2>' +
+
+          '<div class="card">' +
+            '<div class="section-gap" style="gap:8px">' +
+              '<button type="button" class="btn btn-primary btn-block" id="install-app-btn">📲 ' + escapeHtml(t("installAppBtn")) + '</button>' +
+              '<button type="button" class="btn btn-yellow btn-block" id="download-apk-btn">📦 ' + escapeHtml(t("downloadApkBtn")) + '</button>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="card">' +
+            '<div class="form-group">' +
+              '<label class="form-label">' + escapeHtml(t("languageLabel")) + '</label>' +
+              '<div class="segmented">' +
+                '<button type="button" class="seg-btn' + (state.lang === 'ur' ? ' active' : '') + '" data-action="set-lang" data-lang="ur">Roman Urdu</button>' +
+                '<button type="button" class="seg-btn' + (state.lang === 'en' ? ' active' : '') + '" data-action="set-lang" data-lang="en">English</button>' +
+              '</div>' +
+            '</div>' +
+            '<div class="form-group" style="margin-bottom:0">' +
+              '<label class="form-label">' + escapeHtml(t("themeLabel")) + '</label>' +
+              '<div class="segmented">' +
+                '<button type="button" class="seg-btn' + (state.theme === 'light' ? ' active' : '') + '" data-action="set-theme" data-theme="light">☀️ ' + escapeHtml(t("lightMode")) + '</button>' +
+                '<button type="button" class="seg-btn' + (state.theme === 'dark' ? ' active' : '') + '" data-action="set-theme" data-theme="dark">🌙 ' + escapeHtml(t("darkMode")) + '</button>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="card">' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px">' +
+              '<h3 class="section-title" style="margin:0">' + escapeHtml(t("ownerTitle")) + '</h3>' +
+              (state.ownerUnlocked
+                ? '<button type="button" class="btn btn-secondary btn-sm" id="owner-lock-btn">' + escapeHtml(t("lockBtn")) + '</button>'
+                : '') +
+            '</div>' +
+            (!state.ownerUnlocked
+              ? '<div class="inline-row">' +
+                  '<input id="owner-pin-input" class="input" type="password" inputmode="numeric" maxlength="8" placeholder="' + escapeHtml(t("pinPlaceholder")) + '" />' +
+                  '<button type="button" class="btn btn-primary btn-sm" id="owner-unlock-btn">' + escapeHtml(t("unlockBtn")) + '</button>' +
+                '</div>'
+              : '') +
+          '</div>' +
+
+          (state.ownerUnlocked ? renderOwnerPanel() : '') +
+
+          '<div class="card">' +
+            '<h3 class="section-title" style="margin-bottom:6px">' + escapeHtml(t("aboutTitle")) + '</h3>' +
+            '<p style="margin:0 0 2px;font-weight:700">' + escapeHtml(state.settings.shopName) + '</p>' +
+            '<p class="muted" style="margin:0 0 2px">' + escapeHtml(state.settings.address) + '</p>' +
+            '<p class="muted tabular" style="margin:0">' + escapeHtml(t("versionLabel")) + ': ' + escapeHtml(CONFIG.VERSION) + '</p>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    function renderBottomNav() {
+      const cartCount = getCartCount();
+      const tabs = [
+        {
+          id: "home",
+          label: t("navHome"),
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
+        },
+        {
+          id: "menu",
+          label: t("navMenu"),
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>'
+        },
+        {
+          id: "cart",
+          label: t("navCart"),
+          badge: cartCount,
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>'
+        },
+        {
+          id: "offers",
+          label: t("navOffers"),
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>'
+        },
+        {
+          id: "shop",
+          label: t("navShop"),
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+        },
+        {
+          id: "settings",
+          label: t("navSettings"),
+          icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>'
+        }
+      ];
+
+      document.getElementById("bottom-nav").innerHTML = tabs.map((tab) =>
+        '<button type="button" class="nav-tab' + (state.tab === tab.id ? ' active' : '') + '" data-nav="' + tab.id + '">' +
+          '<span class="nav-icon-wrap">' +
+            tab.icon +
+            (tab.badge > 0 ? '<span class="cart-badge tabular">' + tab.badge + '</span>' : '') +
+          '</span>' +
+          '<span class="nav-label">' + escapeHtml(tab.label) + '</span>' +
+        '</button>'
+      ).join("");
+    }
+
+    function applyThemeAndLangHeader() {
+      document.documentElement.classList.toggle("dark", state.theme === "dark");
+      document.documentElement.lang = state.lang === "en" ? "en" : "ur";
+      document.getElementById("header-shop-name").textContent = state.settings.shopName || CONFIG.SHOP_NAME;
+      const langLbl = document.getElementById("header-lang-label");
+      if (state.lang === "en") {
+        langLbl.innerHTML = '<span class="lang-active">EN</span> / اردو';
+      } else {
+        langLbl.innerHTML = 'EN / <span class="lang-active">اردو</span>';
+      }
+    }
+
+    function render() {
+      applyThemeAndLangHeader();
+      const main = document.getElementById("app-main");
+      if (state.tab === "home") main.innerHTML = renderHome();
+      else if (state.tab === "menu") main.innerHTML = renderMenu();
+      else if (state.tab === "cart") main.innerHTML = renderCart();
+      else if (state.tab === "offers") main.innerHTML = renderOffers();
+      else if (state.tab === "shop") main.innerHTML = renderShop();
+      else if (state.tab === "settings") main.innerHTML = renderSettings();
+      renderBottomNav();
+      bindViewHandlers();
+    }
+
+    /* =========================================================================
+       EVENT BINDINGS
+       ========================================================================= */
+    function bindViewHandlers() {
+      // Search input (no full re-render on keystroke)
+      const searchInput = document.getElementById("menu-search-input");
+      if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+          state.searchQuery = e.target.value;
+          renderMenuResultsOnly();
+        });
+      }
+      const searchClear = document.getElementById("menu-search-clear");
+      if (searchClear) {
+        searchClear.addEventListener("click", () => {
+          state.searchQuery = "";
+          render();
+          const inp = document.getElementById("menu-search-input");
+          if (inp) inp.focus();
+        });
+      }
+
+      // Cart form inputs (persist without losing focus)
+      const cName = document.getElementById("cust-name");
+      const cPhone = document.getElementById("cust-phone");
+      const cAddr = document.getElementById("cust-address");
+      const cNote = document.getElementById("cust-note");
+      const saveCust = () => {
+        if (cName) state.customer.name = cName.value;
+        if (cPhone) state.customer.phone = cPhone.value;
+        if (cAddr) state.customer.address = cAddr.value;
+        if (cNote) state.customer.note = cNote.value;
+        safeSetJSON(STORAGE_KEYS.CUSTOMER, state.customer);
+      };
+      [cName, cPhone, cAddr, cNote].forEach((el) => {
+        if (el) el.addEventListener("input", saveCust);
+      });
+
+      const delBtn = document.getElementById("type-delivery-btn");
+      const pickBtn = document.getElementById("type-pickup-btn");
+      if (delBtn) delBtn.addEventListener("click", () => { state.customer.type = "delivery"; saveCust(); render(); });
+      if (pickBtn) pickBtn.addEventListener("click", () => { state.customer.type = "pickup"; saveCust(); render(); });
+
+      const applyCpnBtn = document.getElementById("apply-coupon-btn");
+      const removeCpnBtn = document.getElementById("remove-coupon-btn");
+      if (applyCpnBtn) {
+        applyCpnBtn.addEventListener("click", () => {
+          const inp = document.getElementById("cart-coupon-input");
+          applyCouponCode(inp ? inp.value : "", false);
+        });
+      }
+      if (removeCpnBtn) removeCpnBtn.addEventListener("click", removeCoupon);
+
+      const placeBtn = document.getElementById("place-order-btn");
+      const clearBtn = document.getElementById("clear-cart-btn");
+      if (placeBtn) placeBtn.addEventListener("click", placeOrder);
+      if (clearBtn) clearBtn.addEventListener("click", clearCart);
+
+      // Shop tab handlers
+      const shareBtn = document.getElementById("share-app-btn");
+      if (shareBtn) {
+        shareBtn.addEventListener("click", async () => {
+          const shareText = t("shareText") + " " + window.location.href;
+          if (navigator.share) {
+            try {
+              await navigator.share({ title: state.settings.shopName, text: t("shareText"), url: window.location.href });
+              return;
+            } catch (e) {
+              // Fallback to WhatsApp share
+            }
+          }
+          const url = "https://wa.me/?text=" + encodeURIComponent(shareText);
+          try {
+            const w = window.open(url, "_blank", "noopener");
+            if (!w) window.location.href = url;
+          } catch (e) {
+            window.location.href = url;
+          }
+        });
+      }
+
+      const revText = document.getElementById("review-text");
+      if (revText) revText.addEventListener("input", (e) => { state.reviewText = e.target.value; });
+
+      const sendRevBtn = document.getElementById("send-review-btn");
+      if (sendRevBtn) {
+        sendRevBtn.addEventListener("click", () => {
+          if (!state.reviewRating || state.reviewRating < 1) {
+            showToast(t("errSelectRating"));
+            return;
+          }
+          const waDigits = normalizeWhatsApp(state.settings.whatsapp || CONFIG.WHATSAPP);
+          if (!isValidWhatsApp(waDigits)) {
+            showToast(t("errWaInvalid"));
+            return;
+          }
+          const stars = "★".repeat(state.reviewRating) + "☆".repeat(5 - state.reviewRating);
+          const msg = "*Customer Review - " + state.settings.shopName + "*\nRating: " + stars + " (" + state.reviewRating + "/5)" +
+                      (state.reviewText.trim() ? "\nReview: " + state.reviewText.trim() : "");
+          const url = "https://wa.me/" + waDigits + "?text=" + encodeURIComponent(msg);
+          state.reviewRating = 0;
+          state.reviewText = "";
+          render();
+          try {
+            const w = window.open(url, "_blank", "noopener");
+            if (!w) window.location.href = url;
+          } catch (e) {
+            window.location.href = url;
+          }
+        });
+      }
+
+      // Settings handlers
+      const installBtn = document.getElementById("install-app-btn");
+      if (installBtn) {
+        installBtn.addEventListener("click", async () => {
+          if (state.deferredPrompt) {
+            try {
+              await state.deferredPrompt.prompt();
+              await state.deferredPrompt.userChoice;
+              state.deferredPrompt = null;
+              showToast(t("installDone"));
+              return;
+            } catch (e) {
+              // Fallback to hint
+            }
+          }
+          showToast(t("installHint"));
+        });
+      }
+
+      const apkBtn = document.getElementById("download-apk-btn");
+      if (apkBtn) {
+        apkBtn.addEventListener("click", () => {
+          const url = String(state.settings.apkUrl || CONFIG.APK_URL || "").trim();
+          if (/^https:\/\//i.test(url)) {
+            try {
+              const w = window.open(url, "_blank", "noopener");
+              if (!w) window.location.href = url;
+            } catch (e) {
+              window.location.href = url;
+            }
+          } else {
+            showToast(t("apkSoonToast"));
+          }
+        });
+      }
+
+      const unlockBtn = document.getElementById("owner-unlock-btn");
+      const pinInput = document.getElementById("owner-pin-input");
+      const tryUnlock = () => {
+        const entered = String(pinInput ? pinInput.value : "").trim();
+        const savedPin = safeGet(STORAGE_KEYS.OWNER_PIN, "") || CONFIG.ADMIN_PIN;
+        if (entered && entered === savedPin) {
+          state.ownerUnlocked = true;
+          showToast(t("unlockedToast"));
+          render();
+        } else {
+          showToast(t("wrongPin"));
+        }
+      };
+      if (unlockBtn) unlockBtn.addEventListener("click", tryUnlock);
+      if (pinInput) {
+        pinInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") tryUnlock();
+        });
+      }
+
+      const lockBtn = document.getElementById("owner-lock-btn");
+      if (lockBtn) {
+        lockBtn.addEventListener("click", () => {
+          state.ownerUnlocked = false;
+          state.editingItemId = null;
+          state.editingOfferCode = null;
+          showToast(t("lockedToast"));
+          render();
+        });
+      }
+
+      // Owner Shop Settings Save (MUST NOT change shopMode)
+      const saveSetBtn = document.getElementById("own-save-settings-btn");
+      if (saveSetBtn) {
+        saveSetBtn.addEventListener("click", () => {
+          if (!state.ownerUnlocked) return;
+          const waRaw = document.getElementById("own-wa").value.trim();
+          const waNorm = normalizeWhatsApp(waRaw);
+          if (!isValidWhatsApp(waNorm)) {
+            showToast(t("errInvalidWa"));
+            return;
+          }
+          const apkRaw = document.getElementById("own-apk").value.trim();
+          if (apkRaw && !/^https:\/\//i.test(apkRaw)) {
+            showToast(t("errInvalidApk"));
+            return;
+          }
+          const newPin = document.getElementById("own-pin").value.trim();
+          if (newPin && !/^\d{4,8}$/.test(newPin)) {
+            showToast(t("errInvalidPin"));
+            return;
+          }
+
+          const fee = Math.max(0, Math.round(Number(document.getElementById("own-fee").value) || 0));
+          const minO = Math.max(0, Math.round(Number(document.getElementById("own-min").value) || 0));
+          const openT = document.getElementById("own-open").value || CONFIG.OPEN_TIME;
+          const closeT = document.getElementById("own-close").value || CONFIG.CLOSE_TIME;
+          const spUr = document.getElementById("own-sp-ur").value.trim() || DEFAULT_DATA.special.ur;
+          const spEn = document.getElementById("own-sp-en").value.trim() || DEFAULT_DATA.special.en;
+
+          // Preserve shopMode explicitly!
+          const preservedMode = isValidShopMode(state.settings.shopMode) ? state.settings.shopMode : "auto";
+          state.settings = Object.assign({}, state.settings, {
+            whatsapp: waNorm,
+            apkUrl: apkRaw,
+            deliveryFee: fee,
+            minOrder: minO,
+            openTime: openT,
+            closeTime: closeT,
+            shopMode: preservedMode
+          });
+          state.special = { ur: spUr, en: spEn };
+          if (newPin) {
+            safeSet(STORAGE_KEYS.OWNER_PIN, newPin);
+          }
+          saveOwnerData();
+          showToast(t("settingsSaved"));
+          render();
+        });
+      }
+
+      // Owner Menu Item Save
+      const saveItemBtn = document.getElementById("own-save-item-btn");
+      if (saveItemBtn) {
+        saveItemBtn.addEventListener("click", () => {
+          if (!state.ownerUnlocked) return;
+          const name = document.getElementById("item-name").value.trim();
+          const category = document.getElementById("item-cat").value.trim();
+          const priceRaw = document.getElementById("item-price").value;
+          const price = Number(priceRaw);
+          const emoji = document.getElementById("item-emoji").value.trim() || "🍽️";
+          const photo = sanitizeUrl(document.getElementById("item-photo").value.trim());
+          const description = document.getElementById("item-desc").value.trim();
+          const hot = document.getElementById("item-hot").checked;
+
+          if (!name || !category || priceRaw === "" || !Number.isFinite(price) || price < 0) {
+            showToast(t("errItemFields"));
+            return;
+          }
+
+          if (state.editingItemId) {
+            const idx = state.menu.findIndex((m) => m.id === state.editingItemId);
+            if (idx >= 0) {
+              state.menu[idx] = Object.assign({}, state.menu[idx], {
+                name,
+                category,
+                price: Math.round(price),
+                emoji,
+                photo,
+                description,
+                hot
+              });
+            }
+            state.editingItemId = null;
+          } else {
+            let newId = slugify(name);
+            while (state.menu.some((m) => m.id === newId)) {
+              newId = slugify(name) + "-" + Math.floor(100 + Math.random() * 900);
+            }
+            state.menu.push({
+              id: newId,
+              category,
+              name,
+              price: Math.round(price),
+              emoji,
+              photo,
+              description,
+              hot,
+              soldOut: false
+            });
+          }
+          saveOwnerData();
+          showToast(t("itemSavedToast"));
+          render();
+        });
+      }
+
+      const cancelItemBtn = document.getElementById("own-cancel-item-btn");
+      if (cancelItemBtn) {
+        cancelItemBtn.addEventListener("click", () => {
+          state.editingItemId = null;
+          render();
+        });
+      }
+
+      // Owner Offer Save
+      const saveOfferBtn = document.getElementById("own-save-offer-btn");
+      if (saveOfferBtn) {
+        saveOfferBtn.addEventListener("click", () => {
+          if (!state.ownerUnlocked) return;
+          const code = document.getElementById("offer-code").value.trim().toUpperCase().replace(/\s+/g, "");
+          const discount = Number(document.getElementById("offer-discount").value);
+          const minOrder = Math.max(0, Math.round(Number(document.getElementById("offer-min").value) || 0));
+          const textUr = document.getElementById("offer-ur").value.trim();
+          const textEn = document.getElementById("offer-en").value.trim();
+
+          if (!code || !Number.isFinite(discount) || discount < 1 || discount > 100 || !textUr || !textEn) {
+            showToast(t("errOfferFields"));
+            return;
+          }
+
+          const duplicate = state.offers.some((o) => o.code === code && o.code !== state.editingOfferCode);
+          if (duplicate) {
+            showToast(t("errDuplicateCode"));
+            return;
+          }
+
+          const payload = { code, discount: Math.round(discount), minOrder, textUr, textEn };
+          if (state.editingOfferCode) {
+            const idx = state.offers.findIndex((o) => o.code === state.editingOfferCode);
+            if (idx >= 0) state.offers[idx] = payload;
+            state.editingOfferCode = null;
+          } else {
+            state.offers.push(payload);
+          }
+          saveOwnerData();
+          showToast(t("offerSavedToast"));
+          render();
+        });
+      }
+
+      const cancelOfferBtn = document.getElementById("own-cancel-offer-btn");
+      if (cancelOfferBtn) {
+        cancelOfferBtn.addEventListener("click", () => {
+          state.editingOfferCode = null;
+          render();
+        });
+      }
+
+      // Data Export / Copy / Import / Reset
+      const dlBtn = document.getElementById("own-download-btn");
+      if (dlBtn) {
+        dlBtn.addEventListener("click", () => {
+          if (!state.ownerUnlocked) return;
+          const json = JSON.stringify(exportPayload(), null, 2);
+          const blob = new Blob([json], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "menu-data.json";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+      }
+
+      const copyBtn = document.getElementById("own-copy-btn");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async () => {
+          if (!state.ownerUnlocked) return;
+          const json = JSON.stringify(exportPayload(), null, 2);
+          try {
+            await navigator.clipboard.writeText(json);
+            showToast(t("dataCopied"));
+          } catch (e) {
+            const ta = document.createElement("textarea");
+            ta.value = json;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); showToast(t("dataCopied")); } catch (err) {}
+            document.body.removeChild(ta);
+          }
+        });
+      }
+
+      const impBtn = document.getElementById("own-import-btn");
+      const impFile = document.getElementById("own-import-file");
+      if (impBtn && impFile) {
+        impBtn.addEventListener("click", () => impFile.click());
+        impFile.addEventListener("change", async (e) => {
+          if (!state.ownerUnlocked) return;
+          const file = e.target.files && e.target.files[0];
+          e.target.value = "";
+          if (!file) return;
+          try {
+            const txt = await file.text();
+            const parsed = JSON.parse(txt);
+            const validated = validateAndNormalizeData(parsed);
+            if (!validated) {
+              showToast(t("dataInvalid"));
+              return;
+            }
+            // If file had an invalid mode value, validateAndNormalizeData defaults it safely;
+            // if current mode was already set and file had invalid mode, keep current valid mode or 'auto'
+            const rawSt = parsed && parsed.settings ? parsed.settings : {};
+            const rawMode = rawSt.shopMode !== undefined ? rawSt.shopMode : (rawSt.mode !== undefined ? rawSt.mode : parsed.mode);
+            if (rawMode !== undefined && !isValidShopMode(rawMode)) {
+              validated.settings.shopMode = isValidShopMode(state.settings.shopMode) ? state.settings.shopMode : "auto";
+            }
+            applyLoadedData(validated, true);
+            saveOwnerData();
+            showToast(t("dataImported"));
+            render();
+          } catch (err) {
+            showToast(t("dataInvalid"));
+          }
+        });
+      }
+
+      const resetBtn = document.getElementById("own-reset-btn");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", async () => {
+          if (!state.ownerUnlocked) return;
+          const ok = await showConfirm(t("confirmResetTitle"), t("confirmResetMsg"));
+          if (!ok) return;
+          safeRemove(STORAGE_KEYS.OWNER_DATA);
+          safeRemove(STORAGE_KEYS.CACHED_DATA);
+          applyLoadedData(JSON.parse(JSON.stringify(DEFAULT_DATA)), false);
+          await loadInitialData();
+          showToast(t("dataReset"));
+          render();
+        });
+      }
+    }
+
+    // Delegated click handler on document for navigation, item actions, etc.
+    document.addEventListener("click", async (e) => {
+      const navTarget = e.target.closest("[data-nav]");
+      if (navTarget) {
+        state.tab = navTarget.getAttribute("data-nav");
+        window.scrollTo({ top: 0, behavior: "instant" });
+        render();
+        return;
+      }
+
+      const catTarget = e.target.closest("[data-cat]");
+      if (catTarget) {
+        state.selectedCategory = catTarget.getAttribute("data-cat");
+        render();
+        return;
+      }
+
+      const actionTarget = e.target.closest("[data-action]");
+      if (!actionTarget) return;
+
+      const action = actionTarget.getAttribute("data-action");
+      const id = actionTarget.getAttribute("data-id");
+      const code = actionTarget.getAttribute("data-code");
+
+      if (action === "add") {
+        addToCart(id);
+        showToast(t("addedToCart"));
+      } else if (action === "inc") {
+        changeQty(id, 1);
+      } else if (action === "dec") {
+        changeQty(id, -1);
+      } else if (action === "fav") {
+        toggleFavorite(id);
+      } else if (action === "use-offer") {
+        applyCouponCode(code, true);
+      } else if (action === "order-again") {
+        orderAgain(Number(actionTarget.getAttribute("data-idx")));
+      } else if (action === "star") {
+        state.reviewRating = Number(actionTarget.getAttribute("data-star")) || 0;
+        render();
+      } else if (action === "set-lang") {
+        state.lang = actionTarget.getAttribute("data-lang") === "en" ? "en" : "ur";
+        safeSet(STORAGE_KEYS.LANG, state.lang);
+        render();
+      } else if (action === "set-theme") {
+        state.theme = actionTarget.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        safeSet(STORAGE_KEYS.THEME, state.theme);
+        render();
+      } else if (action === "shop-mode") {
+        if (!state.ownerUnlocked) return;
+        const mode = actionTarget.getAttribute("data-mode");
+        if (!isValidShopMode(mode)) return;
+        state.settings.shopMode = mode;
+        saveOwnerData();
+        render();
+      } else if (action === "own-toggle-sold") {
+        if (!state.ownerUnlocked) return;
+        const item = state.menu.find((m) => m.id === id);
+        if (item) {
+          item.soldOut = !item.soldOut;
+          saveOwnerData();
+          render();
+        }
+      } else if (action === "own-edit-item") {
+        if (!state.ownerUnlocked) return;
+        state.editingItemId = id;
+        render();
+        const el = document.getElementById("item-name");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else if (action === "own-del-item") {
+        if (!state.ownerUnlocked) return;
+        const ok = await showConfirm(t("confirmDeleteTitle"), t("confirmDeleteItemMsg"));
+        if (!ok) return;
+        state.menu = state.menu.filter((m) => m.id !== id);
+        if (state.editingItemId === id) state.editingItemId = null;
+        saveOwnerData();
+        showToast(t("itemDeletedToast"));
+        render();
+      } else if (action === "own-edit-offer") {
+        if (!state.ownerUnlocked) return;
+        state.editingOfferCode = code;
+        render();
+        const el = document.getElementById("offer-code");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else if (action === "own-del-offer") {
+        if (!state.ownerUnlocked) return;
+        const ok = await showConfirm(t("confirmDeleteTitle"), t("confirmDeleteOfferMsg"));
+        if (!ok) return;
+        state.offers = state.offers.filter((o) => o.code !== code);
+        if (state.editingOfferCode === code) state.editingOfferCode = null;
+        saveOwnerData();
+        showToast(t("offerDeletedToast"));
+        render();
+      }
+    });
+
+    // Header language toggle
+    document.getElementById("header-lang-btn").addEventListener("click", () => {
+      state.lang = state.lang === "ur" ? "en" : "ur";
+      safeSet(STORAGE_KEYS.LANG, state.lang);
+      render();
+    });
+
+    // Deferred re-render after customer finishes typing in an input
+    document.addEventListener("focusout", () => {
+      if (state.pendingRenderAfterInput) {
+        setTimeout(() => {
+          if (!isUserTyping() && state.pendingRenderAfterInput) {
+            state.pendingRenderAfterInput = false;
+            render();
+          }
+        }, 50);
+      }
+    });
+
+    // PWA Install Prompt
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      state.deferredPrompt = e;
+    });
+
+    // Service Worker Registration
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+
+    // Periodic remote status polling & visibility refresh
+    setInterval(fetchRemoteStatus, 60000);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        fetchRemoteStatus();
+      }
+    });
+
+    // Boot
+    render();
+    loadInitialData().then(() => {
+      fetchRemoteStatus();
+    });
+  </script>
+</body>
+</html>

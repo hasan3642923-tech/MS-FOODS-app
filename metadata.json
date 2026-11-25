@@ -1,0 +1,6 @@
+{
+  "name": "MS FOODS",
+  "description": "Mobile-first food shop PWA for MS FOODS in Guru Chak 23/SP, Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
